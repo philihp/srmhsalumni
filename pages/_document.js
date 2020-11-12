@@ -21,7 +21,7 @@ class _Document extends Document {
     return (
       <Html>
         <Head />
-        <body>
+        <body className="relative">
           <Main />
           <NextScript />
 

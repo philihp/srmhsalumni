@@ -20,6 +20,9 @@ module.exports = {
         carnation: '#f95b5d',
       },
     },
+    fontFamily: {
+      serif: ['Baskerville', 'Georgia', 'Times New Roman', 'Times', 'serif'],
+    },
   },
   variants: {},
   plugins: [tailwindTypography, tailwindCustomForms],

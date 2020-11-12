@@ -1,7 +1,7 @@
 import React from 'react'
 import Router from 'next/router'
 import { pageview } from '../lib/gtag'
-import '../styles/globals.css'
+import '../styles/index.css'
 
 Router.events.on('routeChangeComplete', pageview)
 

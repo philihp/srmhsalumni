@@ -1,66 +1,50 @@
 import React from 'react'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Header from '../components/header'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <main className="relative font-serif antialiased text-gray-900 max-w-screen-xl mx-auto">
       <Head>
-        <title>Create Next App</title>
+        <title>SRMHS Alumni</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+      <Header />
+      <div className="Article px-4 lg:px-0 prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto">
+        <p>
+          Cupcake ipsum dolor sit amet danish chocolate sweet roll. Lollipop
+          sweet roll cookie jelly-o jelly beans oat cake tart lollipop. Pie
+          marshmallow candy canes candy canes biscuit lemon drops brownie cake
+          liquorice. Jujubes sweet roll bonbon candy. Cheesecake gummi bears
+          cake bonbon tootsie roll pudding gingerbread croissant. Powder
+          chocolate cake danish biscuit brownie ice cream. Tootsie roll
+          liquorice pastry jelly beans jelly beans danish gummi bears. Tart
+          biscuit danish candy canes.
         </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+        <p>
+          Chocolate danish oat cake halvah donut marshmallow ice cream chocolate
+          cake. Tootsie roll pudding sugar plum chupa chups. Wafer marshmallow
+          chupa chups donut jelly-o gingerbread brownie gingerbread. Icing
+          lollipop jelly. Chocolate bar oat cake dragée sweet roll carrot cake.
+          Cheesecake bonbon gingerbread macaroon muffin cotton candy. Ice cream
+          pastry sugar plum carrot cake.
+        </p>
+        <p>
+          Halvah cake liquorice donut sugar plum. Toffee brownie ice cream pie
+          cake jujubes caramels. Wafer marzipan brownie fruitcake. Cupcake
+          soufflé carrot cake. Jelly beans chocolate cake candy canes lollipop
+          powder fruitcake sesame snaps jelly beans. Sugar plum cupcake
+          croissant chocolate bar powder wafer cotton candy jelly-o tart.
+          Gingerbread macaroon powder gummi bears biscuit.
+        </p>
+      </div>
+      <style jsx>
+        {`
+          .Article {
+          }
+        `}
+      </style>
+    </main>
   )
 }

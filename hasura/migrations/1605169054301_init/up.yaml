@@ -1,0 +1,42 @@
+- args:
+    tables:
+    - object_relationships:
+      - name: user
+        using:
+          manual_configuration:
+            column_mapping:
+              id: id
+            remote_table:
+              name: users
+              schema: public
+      select_permissions:
+      - permission:
+          columns:
+          - id
+          - last_seen
+          filter: {}
+        role: user
+      table:
+        name: online_users
+        schema: public
+    - select_permissions:
+      - permission:
+          columns:
+          - id
+          - name
+          filter: {}
+        role: user
+      table:
+        name: users
+        schema: public
+      update_permissions:
+      - permission:
+          check: null
+          columns:
+          - last_seen
+          filter:
+            id:
+              _eq: X-Hasura-User-Id
+        role: user
+    version: 2
+  type: replace_metadata

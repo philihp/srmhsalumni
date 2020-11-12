@@ -17,7 +17,6 @@
 
 # misc
 .DS_Store
-*.pem
 
 # debug
 npm-debug.log*
@@ -29,6 +28,18 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+.envrc
+.env
 
-# vercel
+# Serverless directories
+.serverless
+
+# Next.js
+.next
+
+# VS-Code - ignore everything except the recommended extensions file
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+
 .vercel

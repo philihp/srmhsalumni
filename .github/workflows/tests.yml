@@ -1,0 +1,39 @@
+name: tests
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.4
+      - uses: actions/cache@v2
+        with:
+          path: ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
+      - run: npm install
+      - run: npm run build --if-present
+        env:
+          AUTH0_DOMAIN: test.us.auth0.com
+          AUTH0_CLIENT_ID: __NEEDED_FOR_BUILD__
+          AUTH0_CLIENT_SECRET: __NEEDED_FOR_BUILD__
+          SESSION_COOKIE_SECRET: ________NEEDED_FOR_BUILD________
+      - run: npm run test:coverage
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - uses: actions/cache@v2
+        with:
+          path: ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
+      - run: npm install
+      - run: npm run lint

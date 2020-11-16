@@ -20,4 +20,26 @@ module.exports = {
     SESSION_COOKIE_LIFETIME: 7200, // 2 hours
     APP_HOST: process.env.DOMAIN,
   },
+  redirects: async () => [
+    {
+      source: '/about',
+      destination: '/about/board',
+      permanent: false,
+    },
+    {
+      source: '/membership',
+      destination: '/membership/enrollment',
+      permanent: false,
+    },
+    {
+      source: '/events',
+      destination: '/events/upcoming',
+      permanent: false,
+    },
+    {
+      source: '/engagement',
+      destination: '/engagement/class-representatives',
+      permanent: false,
+    },
+  ],
 }

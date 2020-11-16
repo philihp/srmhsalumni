@@ -22,4 +22,6 @@ const Layout = ({ children }) => (
   </main>
 )
 
+export const getLayout = (page) => <Layout>{page}</Layout>
+
 export default Layout

@@ -1,7 +1,7 @@
 import React from 'react'
-import { getLayout } from '../../components/layout/about'
+import AboutLayout from '../../components/layout/about'
 
 const Awards = () => <div>Awards</div>
 
-Awards.getLayout = getLayout
+Awards.layout = AboutLayout
 export default Awards

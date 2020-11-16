@@ -7,10 +7,14 @@ import '../styles/index.css'
 Router.events.on('routeChangeComplete', pageview)
 
 function MyApp({ Component, pageProps }) {
-  // to add more layouts, see:
+  // to add more layouts, see method 3 in:
   // https://adamwathan.me/2019/10/17/persistent-layout-patterns-in-nextjs/
-  const getLayout = Component.getLayout || ((page) => <Layout>{page}</Layout>)
-  return getLayout(<Component {...pageProps} />)
+  const SiteLayout = Component.layout || Layout
+  return (
+    <SiteLayout>
+      <Component {...pageProps} />
+    </SiteLayout>
+  )
 }
 
 export default MyApp

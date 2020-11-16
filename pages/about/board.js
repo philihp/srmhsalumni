@@ -1,7 +1,7 @@
 import React from 'react'
-import { getLayout } from '../../components/layout/about'
+import AboutLayout from '../../components/layout/about'
 
 const Board = () => <div>Board</div>
 
-Board.getLayout = getLayout
+Board.layout = AboutLayout
 export default Board

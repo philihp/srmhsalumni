@@ -1,7 +1,7 @@
 import React from 'react'
-import { getLayout } from '../../components/layout/events'
+import EventsLayout from '../../components/layout/events'
 
 const Events = () => <div>Events</div>
 
-Events.getLayout = getLayout
+Events.layout = EventsLayout
 export default Events

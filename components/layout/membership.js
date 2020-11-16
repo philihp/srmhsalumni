@@ -1,9 +1,9 @@
 import React from 'react'
-import { getLayout as getStandardLayout } from '.'
+import Layout from '.'
 import HeaderLink from '../header/header-link'
 
 const MembershipLayout = ({ children }) => (
-  <>
+  <Layout>
     <div className="flex items-end justify-end py-2">
       <ul className="inline-flex items-center">
         <HeaderLink href="/membership/enrollment">Enrollment</HeaderLink>
@@ -11,10 +11,7 @@ const MembershipLayout = ({ children }) => (
       </ul>
     </div>
     {children}
-  </>
+  </Layout>
 )
-
-export const getLayout = (page) =>
-  getStandardLayout(<MembershipLayout>{page}</MembershipLayout>)
 
 export default MembershipLayout

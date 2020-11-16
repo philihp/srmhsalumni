@@ -1,7 +1,7 @@
 import React from 'react'
-import { getLayout } from '../../components/layout/engagement'
+import EngagementLayout from '../../components/layout/engagement'
 
 const Committees = () => <div>Committees</div>
 
-Committees.getLayout = getLayout
+Committees.layout = EngagementLayout
 export default Committees

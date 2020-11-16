@@ -1,7 +1,7 @@
 import React from 'react'
-import { getLayout } from '../../components/layout/about'
+import AboutLayout from '../../components/layout/about'
 
 const AnnualReport = () => <div>Annual Report</div>
 
-AnnualReport.getLayout = getLayout
+AnnualReport.layout = AboutLayout
 export default AnnualReport

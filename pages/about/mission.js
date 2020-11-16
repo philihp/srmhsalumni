@@ -1,7 +1,7 @@
 import React from 'react'
-import { getLayout } from '../../components/layout/about'
+import AboutLayout from '../../components/layout/about'
 
 const Mission = () => <div>Mission</div>
 
-Mission.getLayout = getLayout
+Mission.layout = AboutLayout
 export default Mission

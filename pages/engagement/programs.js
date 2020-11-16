@@ -1,7 +1,7 @@
 import React from 'react'
-import { getLayout } from '../../components/layout/engagement'
+import EngagementLayout from '../../components/layout/engagement'
 
 const Programs = () => <div>Programs</div>
 
-Programs.getLayout = getLayout
+Programs.layout = EngagementLayout
 export default Programs

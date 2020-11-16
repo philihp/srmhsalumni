@@ -1,7 +1,7 @@
 import React from 'react'
-import { getLayout } from '../../components/layout/membership'
+import MembershipLayout from '../../components/layout/membership'
 
 const Enrollment = () => <div>Enrollment</div>
 
-Enrollment.getLayout = getLayout
+Enrollment.layout = MembershipLayout
 export default Enrollment

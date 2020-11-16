@@ -1,7 +1,7 @@
 import React from 'react'
-import { getLayout } from '../../components/layout/about'
+import AboutLayout from '../../components/layout/about'
 
 const Vision = () => <div>Vision</div>
 
-Vision.getLayout = getLayout
+Vision.layout = AboutLayout
 export default Vision

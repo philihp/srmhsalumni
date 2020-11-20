@@ -1,4 +1,5 @@
 import React from 'react'
+import StaffCard from '../components/staff-card'
 
 const About = () => (
   <div>
@@ -18,15 +19,30 @@ const About = () => (
       School and alumni.
     </p>
     <h2>Board</h2>
-    <ul>
-      <li> President: Tylisa Finley</li>
-      <li>Vice President: Tiffany Tate</li>
-      <li>Secretary: Des Woods</li>
-      <li>Treasurer: Myshaina Kehinde</li>
-      <li>Membership Director: Clarissa Jones</li>
-      <li>Community Relations Director: Jess Moore Matthews</li>
-      <li>Director of Program &amp; Events: Myshaina Kehinde (interim)</li>
-    </ul>
+    <div className="flex flex-wrap">
+      <StaffCard name="Tylisa Finley" title="President" src="/Tylisa.jpg" />
+      <StaffCard
+        title="Vice President"
+        name="Tiffany Tate"
+        src="/Tiffany.jpg"
+      />
+      <StaffCard title="Secretary" name="Des Woods" src="/Des.png" />
+      <StaffCard
+        title="Treasurer"
+        name="Myshaina Kehinde"
+        src="/Myshaina.jpg"
+      />
+      <StaffCard
+        title="Membership Director"
+        name="Clarissa Jones"
+        src="/Clarissa.jpg"
+      />
+      <StaffCard
+        title="Community Relations Director"
+        name="Jess Moore Matthews"
+        src="/Jess.jpg"
+      />
+    </div>
     <h2>Vision</h2>
     <p>
       The Southeast Raleigh Magnet High School Alumni Association is a
@@ -36,10 +52,10 @@ const About = () => (
       statement, foster campus traditions, and provide a dynamic legacy for
       current and future Alumni of SRMHS
     </p>
-    <h2>Awards</h2>
+    {/* <h2>Awards</h2>
     <p>Place holder page</p>
     <h2>Annual Report</h2>
-    <p>Place holder page</p>
+    <p>Place holder page</p> */}
   </div>
 )
 

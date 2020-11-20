@@ -18,7 +18,7 @@ const Index = () => {
           {/* <HeaderLink href="/gallery">Gallery</HeaderLink> */}
           {/* <HeaderLink href="/shop">Shop</HeaderLink> */}
           <HeaderLink href="/support">Support</HeaderLink>
-          <HeaderLink href="/contact">Contact</HeaderLink>
+          <HeaderLink href="/contact-us">Contact</HeaderLink>
         </ul>
       </div>
     </>

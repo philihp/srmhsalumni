@@ -148,8 +148,8 @@ const Engagement = () => (
       taken by the SRMHS Alumni Executive Board.
     </p>
 
-    <h2>Volunteer</h2>
-    <p>Placeholder for now</p>
+    {/* <h2>Volunteer</h2>
+    <p>Placeholder for now</p> */}
 
     <h2>Programs/Fundraisers</h2>
     <ol>

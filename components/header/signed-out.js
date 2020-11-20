@@ -3,13 +3,13 @@ import Link from 'next/link'
 
 const SignedOut = () => {
   return (
-    <li className="px-2 md:px-4">
+    <div className="px-2 md:px-4">
       <Link href="/api/login">
         <a className="text-gray-500 font-semibold hover:text-purple-500">
           Login
         </a>
       </Link>
-    </li>
+    </div>
   )
 }
 

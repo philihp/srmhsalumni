@@ -1,0 +1,31 @@
+- args:
+    permission:
+      allow_upsert: true
+      backend_only: false
+      check:
+        user_id:
+          _eq: X-Hasura-User-Id
+      columns:
+      - id
+      - created_at
+      - updated_at
+      - user_id
+      - member_type
+      - given_name
+      - middle_name
+      - surname
+      - maiden_name
+      - address1
+      - address2
+      - address_city
+      - address_state
+      - address_zip
+      - current_profession
+      - preferred_pronouns
+      - interests
+      set: {}
+    role: user
+    table:
+      name: enrollments
+      schema: public
+  type: create_insert_permission

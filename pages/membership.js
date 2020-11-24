@@ -64,7 +64,6 @@ const Membership = () => {
               surname,
               maidenName,
             }
-            console.log('trigger submit', { variables })
             addEnrollment({ variables })
           }}
         >

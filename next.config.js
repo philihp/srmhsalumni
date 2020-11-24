@@ -19,6 +19,7 @@ module.exports = {
     HASURA_GRAPHQL_URL: process.env.HASURA_GRAPHQL_URL,
     SESSION_COOKIE_LIFETIME: 7200, // 2 hours
     APP_HOST: process.env.DOMAIN,
+    STRIPE_PUBLIC: process.env.STRIPE_PUBLIC,
   },
   redirects: async () => [
     // {

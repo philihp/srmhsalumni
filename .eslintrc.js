@@ -17,6 +17,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/prop-types': 'off', // turn off now, turn on maybe never?
     'unicorn/filename-case': 'off',
+    'jsx-a11y/label-has-associated-control': ['error', { assert: 'either' }],
   },
   ignorePatterns: [
     'auth0/rules/*.js',

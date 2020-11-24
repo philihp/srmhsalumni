@@ -1,0 +1,33 @@
+- args:
+    permission:
+      backend_only: false
+      check:
+        user_id:
+          _eq: X-Hasura-User-Id
+      columns:
+      - created_at
+      - updated_at
+      - id
+      - address1
+      - address2
+      - address_city
+      - address_state
+      - address_zip
+      - current_profession
+      - given_name
+      - interests
+      - maiden_name
+      - member_type
+      - middle_name
+      - preferred_pronouns
+      - surname
+      - user_id
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+      set: {}
+    role: user
+    table:
+      name: enrollments
+      schema: public
+  type: create_update_permission

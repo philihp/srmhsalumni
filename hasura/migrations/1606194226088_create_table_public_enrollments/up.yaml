@@ -1,0 +1,29 @@
+- args:
+    cascade: false
+    read_only: false
+    sql: CREATE EXTENSION IF NOT EXISTS pgcrypto;
+  type: run_sql
+- args:
+    cascade: false
+    read_only: false
+    sql: "CREATE TABLE \"public\".\"enrollments\"(\"id\" uuid NOT NULL DEFAULT gen_random_uuid(),
+      \"created_at\" timestamptz NOT NULL DEFAULT now(), \"updated_at\" timestamptz
+      NOT NULL DEFAULT now(), \"user_id\" varchar, \"member_type\" varchar, \"given_name\"
+      varchar, \"middle_name\" varchar, \"surname\" varchar, \"maiden_name\" varchar,
+      \"address1\" varchar, \"address2\" varchar, \"address_city\" varchar, \"address_state\"
+      varchar, \"address_zip\" varchar, \"current_profession\" character varying,
+      \"preferred_pronouns\" varchar, \"interests\" varchar, PRIMARY KEY (\"id\")
+      , FOREIGN KEY (\"user_id\") REFERENCES \"public\".\"users\"(\"id\") ON UPDATE
+      restrict ON DELETE restrict, UNIQUE (\"user_id\"));\nCREATE OR REPLACE FUNCTION
+      \"public\".\"set_current_timestamp_updated_at\"()\nRETURNS TRIGGER AS $$\nDECLARE\n
+      \ _new record;\nBEGIN\n  _new := NEW;\n  _new.\"updated_at\" = NOW();\n  RETURN
+      _new;\nEND;\n$$ LANGUAGE plpgsql;\nCREATE TRIGGER \"set_public_enrollments_updated_at\"\nBEFORE
+      UPDATE ON \"public\".\"enrollments\"\nFOR EACH ROW\nEXECUTE PROCEDURE \"public\".\"set_current_timestamp_updated_at\"();\nCOMMENT
+      ON TRIGGER \"set_public_enrollments_updated_at\" ON \"public\".\"enrollments\"
+      \nIS 'trigger to set value of column \"updated_at\" to current timestamp on
+      row update';"
+  type: run_sql
+- args:
+    name: enrollments
+    schema: public
+  type: add_existing_table_or_view

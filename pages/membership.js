@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { gql, useMutation } from '@apollo/react-hooks'
+import { useRouter } from 'next/router'
 import { withApollo } from '../lib/withApollo'
 import { useFetchUser } from '../lib/user'
 
@@ -19,6 +20,10 @@ const ADD_ENROLLMENT = gql`
         surname: $surname
         maiden_name: $maidenName
       }
+      on_conflict: {
+        constraint: enrollments_user_id_key
+        update_columns: [given_name, middle_name, surname, maiden_name]
+      }
     ) {
       id
     }
@@ -26,15 +31,15 @@ const ADD_ENROLLMENT = gql`
 `
 
 const Membership = () => {
+  const router = useRouter()
   const { user, loading } = useFetchUser({ required: true })
-  console.log('Membership render')
   const [givenName, setGivenNameInput] = useState('')
   const [middleName, setMiddleNameInput] = useState('')
   const [surname, setSurnameInput] = useState('')
   const [maidenName, setMaidenNameInput] = useState('')
   const [addEnrollment] = useMutation(ADD_ENROLLMENT, {
-    onCompleted: (data) => {
-      console.log({ data })
+    onCompleted: () => {
+      router.push('/payment')
     },
   })
   return (

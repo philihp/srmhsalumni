@@ -22,25 +22,10 @@ module.exports = {
     STRIPE_PUBLIC: process.env.STRIPE_PUBLIC,
   },
   redirects: async () => [
-    // {
-    //   source: '/about',
-    //   destination: '/about/board',
-    //   permanent: false,
-    // },
-    // {
-    //   source: '/membership',
-    //   destination: '/membership/enrollment',
-    //   permanent: false,
-    // },
-    // {
-    //   source: '/events',
-    //   destination: '/events/upcoming',
-    //   permanent: false,
-    // },
-    // {
-    //   source: '/engagement',
-    //   destination: '/engagement/class-representatives',
-    //   permanent: false,
-    // },
+    {
+      source: '/payment',
+      destination: '/membership',
+      permanent: false,
+    },
   ],
 }

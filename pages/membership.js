@@ -1,8 +1,23 @@
 import React, { useState } from 'react'
-import { gql, useMutation } from '@apollo/react-hooks'
-import { useRouter } from 'next/router'
+import { gql, useMutation, useQuery } from '@apollo/react-hooks'
+import { loadStripe } from '@stripe/stripe-js'
 import { withApollo } from '../lib/withApollo'
 import { useFetchUser } from '../lib/user'
+
+const stripePromise = loadStripe(process.env.STRIPE_PUBLIC)
+
+const gotoPayment = async (_event) => {
+  const { sessionId } = await fetch('/api/stripe/session', {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify({ quantity: 1 }),
+  }).then((res) => res.json())
+  const stripe = await stripePromise
+  const { error } = await stripe.redirectToCheckout({ sessionId })
+  if (error) console.error(error)
+}
 
 const ADD_ENROLLMENT = gql`
   mutation(
@@ -30,27 +45,52 @@ const ADD_ENROLLMENT = gql`
   }
 `
 
+const GET_ENROLLMENT = gql`
+  query MyQuery {
+    enrollments(limit: 1) {
+      id
+      maiden_name
+      given_name
+      middle_name
+      surname
+      created_at
+    }
+  }
+`
+
+const LoadingUser = () => (
+  <div className="bg-blue-100 shadow-md rounded p-4 flex flex-col">
+    Loading form...
+  </div>
+)
+
+const LoadingEnrollment = () => (
+  <div className="bg-blue-100 shadow-md rounded p-4 flex flex-col">
+    Checking enrollment...
+  </div>
+)
+
 const Membership = () => {
-  const router = useRouter()
-  const { user, loading } = useFetchUser({ required: true })
-  const [givenName, setGivenNameInput] = useState('')
-  const [middleName, setMiddleNameInput] = useState('')
-  const [surname, setSurnameInput] = useState('')
-  const [maidenName, setMaidenNameInput] = useState('')
+  const { user, loading: userLoading } = useFetchUser({ required: true })
+  const { data, loading: enrollmentLoading } = useQuery(GET_ENROLLMENT)
   const [addEnrollment] = useMutation(ADD_ENROLLMENT, {
-    onCompleted: () => {
-      router.push('/payment')
-    },
+    onCompleted: gotoPayment,
   })
+  const enrollment = data?.enrollments?.[0]
+  const [givenName, setGivenNameInput] = useState(enrollment?.given_name || '')
+  const [middleName, setMiddleNameInput] = useState(
+    enrollment?.middle_name || ''
+  )
+  const [surname, setSurnameInput] = useState(enrollment?.surname || '')
+  const [maidenName, setMaidenNameInput] = useState(
+    enrollment?.maiden_name || ''
+  )
   return (
     <div>
       <h2>Enrollment Form</h2>
-      {loading && (
-        <div className="bg-blue-100 shadow-md rounded p-4 flex flex-col">
-          ...
-        </div>
-      )}
-      {!loading && (
+      {userLoading && <LoadingUser />}
+      {!userLoading && enrollmentLoading && <LoadingEnrollment />}
+      {!userLoading && !enrollmentLoading && (
         <form
           action="#"
           method="POST"
@@ -103,6 +143,10 @@ const Membership = () => {
             </div>
           </div>
 
+          {enrollment?.created_at && (
+            <p>Enrollment submitted on {enrollment.created_at.slice(0, 10)}</p>
+          )}
+
           <h3>Membership Fee</h3>
 
           <p>
@@ -112,17 +156,17 @@ const Membership = () => {
           </p>
           <p>
             To activate your membership, the membership fee is due with the
-            enrollment form.
+            enrollment form on the next page.
           </p>
           <div className="flex flex-row-reverse">
             <input
               className="form-input bg-indigo-600 hover:bg-indigo-700 text-white justify-center w-1/3 cursor-pointer"
               type="submit"
+              value="Submit for Payment"
             />
           </div>
         </form>
       )}
-
       <h2>FAQ</h2>
       <p>
         Place holder page for now… we ae working on a list of questions and

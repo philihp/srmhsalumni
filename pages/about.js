@@ -42,6 +42,11 @@ const About = () => (
         name="Jess Moore Matthews"
         src="/Jess.jpg"
       />
+      <StaffCard
+        title="Director of Events and Programs"
+        name="Jasmyne Ormond"
+        src="/Jasmyne.jpg"
+      />
     </div>
     <h2>Vision</h2>
     <p>

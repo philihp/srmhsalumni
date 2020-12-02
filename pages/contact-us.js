@@ -2,11 +2,8 @@ import React from 'react'
 
 const ContactUs = () => (
   <div>
-    <a href="mailto:srmhsalumni@gmail.com">
-      {' '}
-      For questions or comments, please contact the association at
-      srmhsalumni@gmail.com
-    </a>
+    For questions or comments, please contact the association at
+    <a href="mailto:srmhsalumni@gmail.com">srmhsalumni@gmail.com</a>
   </div>
 )
 

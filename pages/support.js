@@ -3,8 +3,7 @@ import React from 'react'
 const Support = () => (
   <div>
     <p>
-      For now, can we list the Go Fund me page for the football team: Our
-      booster club is running a fundraiser to help the football team raise
+      Our booster club is running a fundraiser to help the football team raise
       funds. Please help out! Any and everything you can do helps! #gobulldogs
       #BULLDOGPRIDE
     </p>

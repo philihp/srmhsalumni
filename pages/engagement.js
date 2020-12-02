@@ -153,8 +153,14 @@ const Engagement = () => (
 
     <h2>Programs/Fundraisers</h2>
     <ol>
-      <li>BRIDGE Program 
-        The Bridge program seeks to provide current SRMHS students access to SRMHS alumni in their desired career/ life goal. The Bridge program aims to educate and connect students with the necessary life skills needed to jumpstart their ambitions. Bridge will host monthly seminars aiming to bridge the gap between current students and alumni in order to facilitate career development and student success.</li>
+      <li>
+        BRIDGE Program The Bridge program seeks to provide current SRMHS
+        students access to SRMHS alumni in their desired career/ life goal. The
+        Bridge program aims to educate and connect students with the necessary
+        life skills needed to jumpstart their ambitions. Bridge will host
+        monthly seminars aiming to bridge the gap between current students and
+        alumni in order to facilitate career development and student success.
+      </li>
     </ol>
   </div>
 )

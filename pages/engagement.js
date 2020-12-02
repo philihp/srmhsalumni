@@ -3,7 +3,7 @@ import React from 'react'
 const Engagement = () => (
   <div>
     <h2>Committees</h2>
-    <h3>Awards, Scholarships &amp; Nominations Committee</h3>
+    <h3>Awards, Scholarships &amp; Nominations</h3>
     <p>
       The Awards, Scholarships, &amp; Nominations Committee will collect and
       review nominations for all designated awards, scholarships, and positions.
@@ -37,7 +37,7 @@ const Engagement = () => (
       engaging ways.
     </p>
 
-    <h3>Community Service and Partnerships Committee</h3>
+    <h3>Community Service and Partnerships</h3>
     <p>
       The Community Service &amp; Partnership Committee has the primary
       responsibility for planning opportunities for the Alumni Association to
@@ -51,7 +51,7 @@ const Engagement = () => (
       will work with the partners to define the shared goals and outcomes.
     </p>
 
-    <h3>Career/College Preparation Committee</h3>
+    <h3>Career/College Preparation</h3>
     <p>
       The Career &amp; College preparation committee provides guidance and
       support to Career Services and the students of SRMHS. This committee will
@@ -72,7 +72,7 @@ const Engagement = () => (
       opportunities.
     </p>
 
-    <h3>Events, Fundraising, &amp; Programs Committee-</h3>
+    <h3>Events, Fundraising, &amp; Programs</h3>
     <p>
       The Events, Fundraising, &amp; Programs Committee is responsible for
       assisting in the implementation and execution of events that foster
@@ -91,7 +91,7 @@ const Engagement = () => (
       committee to ensure all events are properly promoted.
     </p>
 
-    <h3>Finance &amp; Audit Committee-Chair-</h3>
+    <h3>Finance &amp; Audit</h3>
     <p>
       The Finance &amp; Audit Committee shall ensure a comprehensive budgeting
       system that will enable the association to keep revenue and expense in
@@ -112,7 +112,7 @@ const Engagement = () => (
       results.
     </p>
 
-    <h3>Membership &amp; Outreach Committee-</h3>
+    <h3>Membership &amp; Outreach</h3>
     <p>
       The purpose of the Membership &amp; Outreach Committee is to reach out to,
       encourage, and maintain the membership in the SRMHS Alumni Association.
@@ -153,7 +153,7 @@ const Engagement = () => (
 
     <h2>Programs/Fundraisers</h2>
     <ol>
-      <li>G.E.M.S. Program (Growing, Encouraging and Motivating Students)</li>
+      <li>Bridge Program</li>
     </ol>
   </div>
 )

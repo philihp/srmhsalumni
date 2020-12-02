@@ -72,7 +72,7 @@ const Engagement = () => (
       opportunities.
     </p>
 
-    <h3>Events, Fundraising, &amp; Programs</h3>
+    <h3>Events, Fundraising, &amp; Programs </h3>
     <p>
       The Events, Fundraising, &amp; Programs Committee is responsible for
       assisting in the implementation and execution of events that foster
@@ -153,13 +153,15 @@ const Engagement = () => (
 
     <h2>Programs/Fundraisers</h2>
     <ol>
-      <li>Bridge Program</li>
-      The Bridge program seeks to provide current SRMHS students access to SRMHS
-      Alumni in their desired career and/or life goal. The program aims to
-      educate and connect students with the necessary life skills needed to
-      jumpstart their ambitions. Bridge will host monthly seminars aiming to
-      bridge the gap between current students and alumni in order to facilitate
-      career development and student success.
+      <li>
+        <h3>Bridge Program</h3>
+        The Bridge program seeks to provide current SRMHS students access to
+        SRMHS Alumni in their desired career and/or life goal. The program aims
+        to educate and connect students with the necessary life skills needed to
+        jumpstart their ambitions. Bridge will host monthly seminars aiming to
+        bridge the gap between current students and alumni in order to
+        facilitate career development and student success.
+      </li>
     </ol>
   </div>
 )

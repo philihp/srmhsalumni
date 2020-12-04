@@ -7,16 +7,20 @@ import Warning from '../components/warning'
 
 const stripePromise = loadStripe(process.env.STRIPE_PUBLIC)
 
-const gotoPayment = (email) => async (_event) => {
+const gotoPayment = ({ email, membershipLevel }) => async (_event) => {
+  const body = JSON.stringify({
+    quantity: 1,
+    customer_email: email,
+    membershipLevel,
+  })
   const { sessionId } = await fetch('/api/stripe/session', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
     },
-    body: JSON.stringify({ quantity: 1, customer_email: email }),
+    body,
   }).then((res) => res.json())
   const stripe = await stripePromise
-  console.log('submitting', { sessionId, email })
   const { error } = await stripe.redirectToCheckout({ sessionId })
   if (error) console.error(error)
 }
@@ -65,12 +69,14 @@ const Membership = () => {
   const { data, loading: enrollmentLoading } = useQuery(GET_USER, {
     variables: { userId: user?.sub },
   })
-  const [addEnrollment] = useMutation(ADD_ENROLLMENT, {
-    onCompleted: gotoPayment(data?.users?.[0]?.email),
-  })
+  const email = data?.users?.[0]?.email
   const enrollment = data?.users?.[0]?.enrollment
   const [givenName, setGivenNameInput] = useState(enrollment?.given_name || '')
   const [surname, setSurnameInput] = useState(enrollment?.surname || '')
+  const [membershipLevel, setMembershipLevel] = useState('annual')
+  const [addEnrollment] = useMutation(ADD_ENROLLMENT, {
+    onCompleted: gotoPayment({ email, membershipLevel }),
+  })
 
   return (
     <div>
@@ -113,7 +119,7 @@ const Membership = () => {
             className="form-input mt-1 block w-1/2 rounded"
             value={givenName}
             onChange={(e) => setGivenNameInput(e.target.value)}
-            placeholder="John"
+            placeholder="e.g. John"
           />
           <h5 className="mt-4">Surname</h5>
           <input
@@ -121,7 +127,7 @@ const Membership = () => {
             className="form-input mt-1 block w-1/2 rounded"
             value={surname}
             onChange={(e) => setSurnameInput(e.target.value)}
-            placeholder="Modest"
+            placeholder="e.g. Modest"
           />
 
           <h5 className="mt-4">Membership Level</h5>
@@ -130,8 +136,10 @@ const Membership = () => {
               <input
                 type="radio"
                 className="form-radio"
-                name="accountType"
-                value="personal"
+                name="membershipLevel"
+                value="annual"
+                checked={membershipLevel === 'annual'}
+                onChange={() => setMembershipLevel('annual')}
               />
               <span className="ml-2">Annual</span>
             </label>
@@ -139,8 +147,10 @@ const Membership = () => {
               <input
                 type="radio"
                 className="form-radio"
-                name="accountType"
-                value="busines"
+                name="membershipLevel"
+                value="lifetime"
+                checked={membershipLevel === 'lifetime'}
+                onChange={() => setMembershipLevel('lifetime')}
               />
               <span className="ml-2">Lifetime</span>
             </label>

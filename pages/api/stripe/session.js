@@ -1,22 +1,30 @@
 import Stripe from 'stripe'
 
-const stripe = new Stripe(process.env.STRIPE_PRIVATE, {
-  apiVersion: '2020-08-27',
-})
+const PRICES = {
+  annual: process.env.STRIPE_ANNUAL_PRICE_ID,
+  lifetime: process.env.STRIPE_LIFETIME_PRICE_ID,
+}
+
+const MODES = {
+  annual: 'subscription',
+  lifetime: 'payment',
+}
+
+const apiVersion = '2020-08-27'
+const stripe = new Stripe(process.env.STRIPE_PRIVATE, { apiVersion })
 
 export default async function session(req, res) {
   if (req.method === 'POST') {
-    const { quantity, customer_email: customerEmail } = req.body
+    const {
+      quantity,
+      membershipLevel,
+      customer_email: customerEmail,
+    } = req.body
     const ses = await stripe.checkout.sessions.create({
       customer_email: customerEmail,
       payment_method_types: ['card'],
-      line_items: [
-        {
-          price: 'price_1HqyKrGbrmPFi1xjAPk2zu47',
-          quantity,
-        },
-      ],
-      mode: 'subscription',
+      line_items: [{ price: PRICES[membershipLevel], quantity }],
+      mode: MODES[membershipLevel],
       success_url: `${req.headers.origin}/api/stripe/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${req.headers.origin}/api/stripe/cancel?session_id={CHECKOUT_SESSION_ID}`,
     })

@@ -87,7 +87,7 @@ const Membership = () => {
         <form
           action="#"
           method="POST"
-          className="bg-blue-100 shadow-md rounded p-4 flex flex-col"
+          className="bg-blue-100 shadow-xl rounded p-4 flex flex-col"
           onSubmit={(e) => {
             e.preventDefault()
             const variables = {
@@ -108,7 +108,7 @@ const Membership = () => {
           <h5>Email Address</h5>
           <input
             id="email"
-            className="form-input mt-1 block w-1/2 rounded opacity-50"
+            className="form-input mt-1 block w-1/2 rounded opacity-50 shadow"
             value={user?.name}
             readOnly
           />
@@ -116,7 +116,7 @@ const Membership = () => {
           <h5 className="mt-4">Given name</h5>
           <input
             id="given_name"
-            className="form-input mt-1 block w-1/2 rounded"
+            className="form-input mt-1 block w-1/2 rounded shadow"
             value={givenName}
             onChange={(e) => setGivenNameInput(e.target.value)}
             placeholder="e.g. John"
@@ -124,7 +124,7 @@ const Membership = () => {
           <h5 className="mt-4">Surname</h5>
           <input
             id="surname"
-            className="form-input mt-1 block w-1/2 rounded"
+            className="form-input mt-1 block w-1/2 rounded shadow"
             value={surname}
             onChange={(e) => setSurnameInput(e.target.value)}
             placeholder="e.g. Modest"
@@ -135,7 +135,7 @@ const Membership = () => {
             <label className="inline-flex items-center">
               <input
                 type="radio"
-                className="form-radio"
+                className="form-radio shadow"
                 name="membershipLevel"
                 value="annual"
                 checked={membershipLevel === 'annual'}
@@ -146,7 +146,7 @@ const Membership = () => {
             <label className="inline-flex items-center ml-6">
               <input
                 type="radio"
-                className="form-radio"
+                className="form-radio shadow"
                 name="membershipLevel"
                 value="lifetime"
                 checked={membershipLevel === 'lifetime'}
@@ -169,7 +169,7 @@ const Membership = () => {
           </p>
           <div className="flex flex-row-reverse">
             <input
-              className="form-input bg-indigo-600 hover:bg-indigo-700 text-white justify-center w-1/3 cursor-pointer"
+              className="form-input bg-indigo-600 hover:bg-indigo-700 text-white justify-center w-1/3 cursor-pointer rounded shadow"
               type="submit"
               value="Submit for Payment"
             />

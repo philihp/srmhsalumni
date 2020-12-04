@@ -5,6 +5,8 @@ const Index = () => {
     <>
       <p>
        Fellow Alumni, Future Alumni, Friends, and Visitors:
+    </p>
+    <p>
         It is a pleasure to welcome you to the Southeast Raleigh Magnet High School
         Alumni Association. I am profoundly honored to serve as the President of our
         SRMHS Alumni Association. I am even more proud to serve as President with
@@ -36,9 +38,14 @@ const Index = () => {
     Please continue to visit us on the website and our social media for information on
     the Alumni Association, events, donating, and serving.
     Special thanks to each of you for your support!
-    
+    </p>
+    <p>
     With warmest regard,
+    </p>
+    <p>
     Tylisa Finley
+    </p>
+    <p>
     President, SRMHS Alumni Association
     </p>
     </>

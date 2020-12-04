@@ -3,16 +3,22 @@ import { gql, useMutation, useQuery } from '@apollo/react-hooks'
 import { loadStripe } from '@stripe/stripe-js'
 import { withApollo } from '../lib/withApollo'
 import { useFetchUser } from '../lib/user'
+import Warning from '../components/warning'
 
 const stripePromise = loadStripe(process.env.STRIPE_PUBLIC)
 
-const gotoPayment = async (_event) => {
+const gotoPayment = ({ email, membershipLevel }) => async (_event) => {
+  const body = JSON.stringify({
+    quantity: 1,
+    customer_email: email,
+    membershipLevel,
+  })
   const { sessionId } = await fetch('/api/stripe/session', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
     },
-    body: JSON.stringify({ quantity: 1 }),
+    body,
   }).then((res) => res.json())
   const stripe = await stripePromise
   const { error } = await stripe.redirectToCheckout({ sessionId })
@@ -20,21 +26,9 @@ const gotoPayment = async (_event) => {
 }
 
 const ADD_ENROLLMENT = gql`
-  mutation(
-    $userId: String!
-    $givenName: String!
-    $middleName: String!
-    $surname: String!
-    $maidenName: String!
-  ) {
+  mutation($userId: String!, $givenName: String!, $surname: String!) {
     insert_enrollments_one(
-      object: {
-        user_id: $userId
-        given_name: $givenName
-        middle_name: $middleName
-        surname: $surname
-        maiden_name: $maidenName
-      }
+      object: { user_id: $userId, given_name: $givenName, surname: $surname }
       on_conflict: {
         constraint: enrollments_user_id_key
         update_columns: [given_name, middle_name, surname, maiden_name]
@@ -45,15 +39,15 @@ const ADD_ENROLLMENT = gql`
   }
 `
 
-const GET_ENROLLMENT = gql`
-  query MyQuery {
-    enrollments(limit: 1) {
-      id
-      maiden_name
-      given_name
-      middle_name
-      surname
-      created_at
+const GET_USER = gql`
+  query($userId: String!) {
+    users(where: { id: { _eq: $userId } }) {
+      email
+      enrollment {
+        given_name
+        surname
+        created_at
+      }
     }
   }
 `
@@ -66,25 +60,24 @@ const LoadingUser = () => (
 
 const LoadingEnrollment = () => (
   <div className="bg-blue-100 shadow-md rounded p-4 flex flex-col">
-    Checking enrollment...
+    Checking for prior enrollment...
   </div>
 )
 
 const Membership = () => {
   const { user, loading: userLoading } = useFetchUser({ required: true })
-  const { data, loading: enrollmentLoading } = useQuery(GET_ENROLLMENT)
-  const [addEnrollment] = useMutation(ADD_ENROLLMENT, {
-    onCompleted: gotoPayment,
+  const { data, loading: enrollmentLoading } = useQuery(GET_USER, {
+    variables: { userId: user?.sub },
   })
-  const enrollment = data?.enrollments?.[0]
+  const email = data?.users?.[0]?.email
+  const enrollment = data?.users?.[0]?.enrollment
   const [givenName, setGivenNameInput] = useState(enrollment?.given_name || '')
-  const [middleName, setMiddleNameInput] = useState(
-    enrollment?.middle_name || ''
-  )
   const [surname, setSurnameInput] = useState(enrollment?.surname || '')
-  const [maidenName, setMaidenNameInput] = useState(
-    enrollment?.maiden_name || ''
-  )
+  const [membershipLevel, setMembershipLevel] = useState('annual')
+  const [addEnrollment] = useMutation(ADD_ENROLLMENT, {
+    onCompleted: gotoPayment({ email, membershipLevel }),
+  })
+
   return (
     <div>
       <h2>Enrollment Form</h2>
@@ -94,58 +87,74 @@ const Membership = () => {
         <form
           action="#"
           method="POST"
-          className="bg-blue-100 shadow-md rounded p-4 flex flex-col"
+          className="bg-blue-100 shadow-xl rounded p-4 flex flex-col"
           onSubmit={(e) => {
             e.preventDefault()
             const variables = {
               userId: user.sub,
               givenName,
-              middleName,
               surname,
-              maidenName,
             }
             addEnrollment({ variables })
           }}
         >
-          <div className="flex">
-            <div className="w-full">
-              <label htmlFor="given_name" className="text-gray-700">
-                Name
-              </label>
-              <input
-                id="given_name"
-                className="form-input block mb-2"
-                value={givenName}
-                onChange={(e) => setGivenNameInput(e.target.value)}
-                placeholder="Given Name"
-              />
-              <input
-                id="middle_name"
-                className="form-input block mb-2"
-                value={middleName}
-                onChange={(e) => setMiddleNameInput(e.target.value)}
-                placeholder="Middle Name"
-              />
-              <input
-                id="surname"
-                className="form-input block mb-2"
-                value={surname}
-                onChange={(e) => setSurnameInput(e.target.value)}
-                placeholder="Surname"
-              />
-              <input
-                id="maiden_name"
-                className="form-input block mb-2"
-                value={maidenName}
-                onChange={(e) => setMaidenNameInput(e.target.value)}
-                placeholder="Maiden Name"
-              />
-            </div>
-          </div>
-
           {enrollment?.created_at && (
-            <p>Enrollment submitted on {enrollment.created_at.slice(0, 10)}</p>
+            <Warning>
+              Records show a previous enrollment was submitted on{' '}
+              {enrollment.created_at.slice(0, 10)}, and is awaiting approval. If
+              this was an error, please email srmhsalumni@gmail.com
+            </Warning>
           )}
+          <h5>Email Address</h5>
+          <input
+            id="email"
+            className="form-input mt-1 block w-1/2 rounded opacity-50 shadow"
+            value={user?.name}
+            readOnly
+          />
+
+          <h5 className="mt-4">Given name</h5>
+          <input
+            id="given_name"
+            className="form-input mt-1 block w-1/2 rounded shadow"
+            value={givenName}
+            onChange={(e) => setGivenNameInput(e.target.value)}
+            placeholder="e.g. John"
+          />
+          <h5 className="mt-4">Surname</h5>
+          <input
+            id="surname"
+            className="form-input mt-1 block w-1/2 rounded shadow"
+            value={surname}
+            onChange={(e) => setSurnameInput(e.target.value)}
+            placeholder="e.g. Modest"
+          />
+
+          <h5 className="mt-4">Membership Level</h5>
+          <div className="block">
+            <label className="inline-flex items-center">
+              <input
+                type="radio"
+                className="form-radio shadow"
+                name="membershipLevel"
+                value="annual"
+                checked={membershipLevel === 'annual'}
+                onChange={() => setMembershipLevel('annual')}
+              />
+              <span className="ml-2">Annual</span>
+            </label>
+            <label className="inline-flex items-center ml-6">
+              <input
+                type="radio"
+                className="form-radio shadow"
+                name="membershipLevel"
+                value="lifetime"
+                checked={membershipLevel === 'lifetime'}
+                onChange={() => setMembershipLevel('lifetime')}
+              />
+              <span className="ml-2">Lifetime</span>
+            </label>
+          </div>
 
           <h3>Membership Fee</h3>
 
@@ -160,7 +169,7 @@ const Membership = () => {
           </p>
           <div className="flex flex-row-reverse">
             <input
-              className="form-input bg-indigo-600 hover:bg-indigo-700 text-white justify-center w-1/3 cursor-pointer"
+              className="form-input bg-indigo-600 hover:bg-indigo-700 text-white justify-center w-1/3 cursor-pointer rounded shadow"
               type="submit"
               value="Submit for Payment"
             />

@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-const Warning = ({ children, type, color }) => (
+const Warning = ({ children, type }) => (
   <div className="text-center">
     <div className="p-2">
       <div className="inline-flex items-center bg-white leading-none text-pink-600 rounded-full p-2 shadow text-teal text-sm">
         <span
           className={cx(
             'inline-flex',
-            `bg-${color}-500`,
+            `bg-red-500`,
             'text-white',
             'rounded-full',
             'h-6',
@@ -28,12 +28,10 @@ const Warning = ({ children, type, color }) => (
 
 Warning.propTypes = {
   type: PropTypes.string,
-  color: PropTypes.string,
 }
 
 Warning.defaultProps = {
   type: 'Warning',
-  color: 'red',
 }
 
 export default Warning

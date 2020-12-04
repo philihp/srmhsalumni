@@ -7,9 +7,7 @@ const GET_ENROLLMENT = gql`
   subscription {
     enrollments(limit: 1) {
       id
-      maiden_name
       given_name
-      middle_name
       surname
       created_at
     }
@@ -23,7 +21,7 @@ const Profile = () => {
 
   return (
     <div>
-      <h1>Placeholder</h1>
+      <h1>Profile</h1>
       <pre>{JSON.stringify(data?.enrollments?.[0], undefined, 2)}</pre>
     </div>
   )

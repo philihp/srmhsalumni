@@ -1,4 +1,4 @@
-import Stripe from 'stripe'
+import stripe from '../../../lib/stripe'
 
 const PRICES = {
   annual: process.env.STRIPE_ANNUAL_PRICE_ID,
@@ -9,9 +9,6 @@ const MODES = {
   annual: 'subscription',
   lifetime: 'payment',
 }
-
-const apiVersion = '2020-08-27'
-const stripe = new Stripe(process.env.STRIPE_PRIVATE, { apiVersion })
 
 export default async function session(req, res) {
   if (req.method === 'POST') {
@@ -25,12 +22,20 @@ export default async function session(req, res) {
       payment_method_types: ['card'],
       line_items: [{ price: PRICES[membershipLevel], quantity }],
       mode: MODES[membershipLevel],
-      success_url: `${req.headers.origin}/api/stripe/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${req.headers.origin}/api/stripe/cancel?session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `${req.headers.origin}/api/stripe/success?sessionId={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${req.headers.origin}/membership`,
     })
-    res.status(200).json({ sessionId: ses.id })
-  } else {
-    res.setHeader('Allow', 'POST')
-    res.status(405).end('Method Not Allowed')
+    return res.status(200).json({ sessionId: ses.id })
   }
+
+  if (req.method === 'GET') {
+    const { sessionId } = req.query
+    if (sessionId === undefined)
+      return res.status(400).end('GET requires a sessionID param')
+    const checkoutSession = await stripe.checkout.sessions.retrieve(sessionId)
+    return res.status(200).json(checkoutSession)
+  }
+
+  res.setHeader('Allow', 'POST', 'GET')
+  return res.status(405).end('Method Not Allowed')
 }

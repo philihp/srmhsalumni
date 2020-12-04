@@ -6,8 +6,9 @@ const stripe = new Stripe(process.env.STRIPE_PRIVATE, {
 
 export default async function session(req, res) {
   if (req.method === 'POST') {
-    const { quantity } = req.body
+    const { quantity, customer_email: customerEmail } = req.body
     const ses = await stripe.checkout.sessions.create({
+      customer_email: customerEmail,
       payment_method_types: ['card'],
       line_items: [
         {

@@ -1,0 +1,13 @@
+- args:
+    name: enrollment
+    table:
+      name: users
+      schema: public
+    using:
+      manual_configuration:
+        column_mapping:
+          id: user_id
+        remote_table:
+          name: enrollments
+          schema: public
+  type: create_object_relationship

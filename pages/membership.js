@@ -176,7 +176,7 @@ const Membership = () => {
           </div>
         </form>
       )}
-      <h2>FAQ</h2>
+      <h2>Frequently Asked Questions</h2>
       <p>
         1.	How do I join the Alumni Association? 
           </p>
@@ -190,7 +190,7 @@ const Membership = () => {
                       Completed application and payment must be placed in a sealed envelope and placed the SRMHS Alumni mailbox. 
           </p>
           <p>
-                  By mail: Complete the Membership Application and mail to Southeast Raleigh Magnet Hight School at 2600 Rock Quarry Rd, Raleigh, NC 27610.
+                  By mail: Complete the Membership Application and mail to it along with payment to Southeast Raleigh Magnet Hight School at 2600 Rock Quarry Rd, Raleigh, NC 27610.
       </p>
        <p>
          2.	What is the cost to be a member? 

@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Index = () => {
   return (
@@ -43,6 +44,12 @@ const Index = () => {
       <p>With warmest regard,</p>
       <p>Tylisa Finley</p>
       <p>President, SRMHS Alumni Association</p>
+      <Image
+        src="/SE School Photo.png"
+        alt="Southeast Raleigh High School"
+        width={1396}
+        height={786}
+      />
     </>
   )
 }

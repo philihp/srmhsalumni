@@ -31,7 +31,7 @@ const ADD_ENROLLMENT = gql`
       object: { user_id: $userId, given_name: $givenName, surname: $surname }
       on_conflict: {
         constraint: enrollments_user_id_key
-        update_columns: [given_name, middle_name, surname, maiden_name]
+        update_columns: [given_name, surname]
       }
     ) {
       id

@@ -186,7 +186,8 @@ const Membership = () => {
           <p>
                   In person: Stop by Southeast Raleigh Magnet High School and complete a membership application.  
                       We can accept checks and certified money orders in person. 
-                      Make the check or money order out to Southeast Raleigh Magnet High School Alumni Association and Friends. 
+                      Make the check or money order out to Southeast Raleigh Magnet High School Alumni Association and Friends.
+                      Completed application and payment must be placed in a sealed envelope and placed the SRMHS Alumni mailbox. 
           </p>
           <p>
                   By mail: Complete the Membership Application and mail to Southeast Raleigh Magnet Hight School at 2600 Rock Quarry Rd, Raleigh, NC 27610.

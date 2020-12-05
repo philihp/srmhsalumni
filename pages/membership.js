@@ -181,21 +181,21 @@ const Membership = () => {
         1.	How do I join the Alumni Association? 
           </p>
           <p>
-                  a.	Online:  Only credit/debit cards are accepted online.
+                  Online:  Only credit/debit cards are accepted online.
           </p>
           <p>
-                  b.	In person: Stop by Southeast Raleigh Magnet High School and complete a membership application.  
+                  In person: Stop by Southeast Raleigh Magnet High School and complete a membership application.  
                       We can accept checks and certified money orders in person. 
                       Make the check or money order out to Southeast Raleigh Magnet High School Alumni Association and Friends. 
-          
+          </p>
           <p>
-                  c.	By mail: Complete the Membership Application and mail to Southeast Raleigh Magnet Hight School at 2600 Rock Quarry Rd, Raleigh, NC 27610.
+                  By mail: Complete the Membership Application and mail to Southeast Raleigh Magnet Hight School at 2600 Rock Quarry Rd, Raleigh, NC 27610.
       </p>
        <p>
          2.	What is the cost to be a member? 
            </p>
            <p>
-                  a.	The cost of a membership is $100.00 per year or a one-time fee of $1000.00 for a lifetime membership.
+                  The cost of a membership is $100.00 per year or a one-time fee of $1000.00 for a lifetime membership.
  
       </p>
     </div>

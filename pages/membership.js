@@ -197,6 +197,22 @@ const Membership = () => {
            </p>
            <p>
                   The cost of a membership is $100.00 per year or a one-time fee of $1000.00 for a lifetime membership.
+         </p>
+         <p>
+           3.	When do I complete my membership profile? 
+         </p>
+         <p>
+                  After your payment is accepted, you will then be directed to complete your profile page. 
+         </p>
+         <p>
+           4.	Do I have to be an alumnus of Southeast Raleigh Magnet High School?
+         </p>
+         <p>
+                  No! Our membership plans and benefits are geared towards SRMHS grads, but membership is not only limited to graduates of the high school. 
+                  If you attended SRMHS school for at least 1 year, you could become a member. 
+                  If you currently work at SRMHS as faculty or staff, and 
+                  If you are a member of the community that holds the same values and purpose of the association; you can also become a member. 
+
  
       </p>
     </div>

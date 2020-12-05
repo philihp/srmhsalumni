@@ -215,7 +215,7 @@ const Membership = () => {
          </p>
          <p>
            5.	What comes with the membership? 
-         </P>
+         </p>
          <p>
                   As a member of the SRMHS Alumni Association there are many perks and benefits. As a member you receive:
                   (1) Special seating at select sporting games held at the school,

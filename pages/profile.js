@@ -44,7 +44,14 @@ const Profile = () => {
           value={enrollment?.given_name}
         />
       </label>
-      <pre>{JSON.stringify(enrollment, undefined, 2)}</pre>
+      <label>
+        <div>Surname</div>
+        <input
+          type="text"
+          className="form-input border rounded shadow-lg"
+          value={enrollment?.surnname}
+        />
+      </label>
     </div>
   )
 }

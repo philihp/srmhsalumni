@@ -10,6 +10,7 @@ const GET_ENROLLMENT = gql`
       given_name
       surname
       created_at
+      member_type
     }
   }
 `

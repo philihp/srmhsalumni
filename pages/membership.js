@@ -212,7 +212,54 @@ const Membership = () => {
                   If you attended SRMHS school for at least 1 year, you could become a member. 
                   If you currently work at SRMHS as faculty or staff, and 
                   If you are a member of the community that holds the same values and purpose of the association; you can also become a member. 
-
+         </p>
+         <p>
+           5.	What comes with the membership? 
+         </P>
+         <p>
+                  As a member of the SRMHS Alumni Association there are many perks and benefits. As a member you receive:
+                  (1) Special seating at select sporting games held at the school,
+                  (2) Select promotional items provided by the association, 
+                  (3) Opportunities to apply for special scholarships for students/children of alumni who attend SRMHS,
+                  (4) Invitations to special events held by the association at a discounted price, and other benefits. 
+         </p>
+         <p>
+                  As a lifetime member, you will receive all the afore mentioned benefits as well as free admission to one Alumni event during your 
+                  first year of membership and then a 50% off the cost of future events. 
+         </p>
+         <p>
+           6.	Is there an annual fee for membership?
+         </p>
+         <p>       
+                  Yes, the annual fee is $100
+         </p>
+         <p>  
+            7.	Married couple discounts? 
+         </p>
+         <p>  
+                  No, we do not have a discount for married couples 
+         </p>
+         <p>
+             8.	What is the different between a lifetime member vs. regular membership? 
+         </p>
+         <p>  
+                  A regular membership has an annual cost of $100.  The lifetime membership has a one-time fee of $1000. 
+                  A lifetime membership also provides a discounted cost to Alumni events. 
+         </p>
+         <p>
+             9.	Where does the money I pay for membership go to? 
+         </p>
+         <p>  
+                  The Alumni Association will allocate the resources provided by members via membership costs and donations to pay for events held by the association, 
+                  scholarships provided to students, as well as to the school itself. As a member, you will have the opportunity to view and vote on budgets provided 
+                  by the financial committee. 
+         </p>
+         <p>
+             10.	How can I cancel my membership?
+         </p>
+         <p>  
+                  If you ever want to cancel your membership for any reason, please email srmhsalumni@gmail.com for assistance.  
+                  Please note there will not be any refunds provided for cancelled memberships. 
  
       </p>
     </div>

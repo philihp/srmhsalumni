@@ -179,7 +179,7 @@ const Membership = () => {
       <h2>Frequently Asked Questions</h2>
       <p>
         
-         1. How do I join the Alumni Association? 
+         1. <b>How do I join the Alumni Association?</b> 
            </p>
            <p>
            Online: Only credit/debit cards are accepted online.

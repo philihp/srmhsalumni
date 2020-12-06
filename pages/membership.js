@@ -178,28 +178,23 @@ const Membership = () => {
       )}
       <h2>Frequently Asked Questions</h2>
       <p>
-        <h1>Pure CSS Accordion <sup>2.0</sup></h1>
-<div classname="row">
-  <div classname="col">
-    <h2> <b>How do I join the Alumni Association? </b></h2>
-    <div classname="tabs">
-      <div classname="tab">
-        <input type="checkbox" id="chck1">
-        <label classname="tab-label" for="chck1">Answer</label>
-        <div classname="tab-content">
-          Online:  Only credit/debit cards are accepted online.
+        
+         1. How do I join the Alumni Association? 
+           </p>
+           <p>
+           Online: Only credit/debit cards are accepted online.
+           </p>
+           <p>
+           In person: Stop by Southeast Raleigh Magnet High School and complete a membership
+           application. We can accept checks and certified money orders in person. 
+           Make the check or money order out to Southeast Raleigh Magnet High School Alumni Association and Friends. 
+           Completed application and payment must be placed in a sealed envelope and placed the SRMHS Alumni mailbox.
+           </p>
+           <p>
+             By mail: Complete the Membership Application and mail to it along with payment to 
+             Southeast Raleigh Magnet Hight School at 2600 Rock Quarry Rd, Raleigh, NC 27610.
           </p>
           <p>
-                  In person: Stop by Southeast Raleigh Magnet High School and complete a membership application.  
-                      We can accept checks and certified money orders in person. 
-                      Make the check or money order out to Southeast Raleigh Magnet High School Alumni Association and Friends.
-                      Completed application and payment must be placed in a sealed envelope and placed the SRMHS Alumni mailbox. 
-          </p>
-          <p>
-                  By mail: Complete the Membership Application and mail to it along with payment to Southeast Raleigh Magnet Hight School at 2600 Rock Quarry Rd, Raleigh, NC 27610.
-        </div>
-</p>
-
          2.	What is the cost to be a member? 
            </p>
            <p>

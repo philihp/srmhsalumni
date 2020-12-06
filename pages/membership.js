@@ -198,6 +198,7 @@ const Membership = () => {
           <p>
                   By mail: Complete the Membership Application and mail to it along with payment to Southeast Raleigh Magnet Hight School at 2600 Rock Quarry Rd, Raleigh, NC 27610.
         </div>
+</p>
 
          2.	What is the cost to be a member? 
            </p>

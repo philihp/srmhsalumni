@@ -178,10 +178,16 @@ const Membership = () => {
       )}
       <h2>Frequently Asked Questions</h2>
       <p>
-        1.	How do I join the Alumni Association? 
-          </p>
-          <p>
-                  Online:  Only credit/debit cards are accepted online.
+        <h1>Pure CSS Accordion <sup>2.0</sup></h1>
+<div classname="row">
+  <div classname="col">
+    <h2> <b>How do I join the Alumni Association? </b></h2>
+    <div classname="tabs">
+      <div classname="tab">
+        <input type="checkbox" id="chck1">
+        <label classname="tab-label" for="chck1">Answer</label>
+        <div classname="tab-content">
+          Online:  Only credit/debit cards are accepted online.
           </p>
           <p>
                   In person: Stop by Southeast Raleigh Magnet High School and complete a membership application.  
@@ -191,8 +197,8 @@ const Membership = () => {
           </p>
           <p>
                   By mail: Complete the Membership Application and mail to it along with payment to Southeast Raleigh Magnet Hight School at 2600 Rock Quarry Rd, Raleigh, NC 27610.
-      </p>
-       <p>
+        </div>
+
          2.	What is the cost to be a member? 
            </p>
            <p>

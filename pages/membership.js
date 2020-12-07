@@ -230,6 +230,10 @@ const Membership = () => {
                   first year of membership and then a 50% off the cost of future events. 
          </p>
          <p>
+                   As an active member you will also have the right to vote at all meetings, and shall be eligible for appointment to committees 
+                   and to hold office in accordance with the by-laws of the association.
+         </p>
+         <p> 
            <b>6.	Is there an annual fee for membership?</b>
          </p>
          <p>       

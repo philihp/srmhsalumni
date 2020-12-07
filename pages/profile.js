@@ -4,6 +4,7 @@ import { withApollo } from '../lib/withApollo'
 import { useFetchUser } from '../lib/user'
 import Warning from '../components/warning'
 import MembershipStatusIcon from '../components/membership-status-icon'
+import InputText from '../components/profile/input-text'
 
 const GET_ENROLLMENT = gql`
   subscription($userId: String!) {
@@ -36,22 +37,33 @@ const Profile = () => {
       <div>Membership Status</div>
       <MembershipStatusIcon memberType={enrollment?.member_type} />
 
-      <label>
-        <div>Given Name</div>
-        <input
-          type="text"
-          className="form-input border rounded shadow-lg"
-          value={enrollment?.given_name}
-        />
-      </label>
-      <label>
-        <div>Surname</div>
-        <input
-          type="text"
-          className="form-input border rounded shadow-lg"
-          value={enrollment?.surnname}
-        />
-      </label>
+      <p>
+        An active membership status is required for inclusion in the alumni
+        directory. If you&apos;re interested in this, please get in touch with a
+        class rep.
+      </p>
+
+      <InputText label="Given Name" value={enrollment?.given_name} />
+      <InputText label="Surname" value={enrollment?.surname} />
+
+      {/* <pre>
+        {`
+Photo
+Date of birth
+class of (even if you attended 1 year)
+
+would you like to be a class representative?
+
+I understand SRMHS Alumni Association is maintaining an Alumni & Friends directory. I agree to have my profile included.
+Yes
+No
+
+email (include in profile?)
+home phone (include in profile?)
+cell phone (include in profile?)
+
+Profile (Markdown)`}
+      </pre> */}
     </div>
   )
 }

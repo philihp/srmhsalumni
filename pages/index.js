@@ -45,7 +45,7 @@ const Index = () => {
       <p>Tylisa Finley</p>
       <p>President, SRMHS Alumni Association</p>
       <Image
-        src="/SE School Photo.png"
+        src="/SESchoolPhoto.jpg"
         alt="Southeast Raleigh High School"
         width={1396}
         height={786}

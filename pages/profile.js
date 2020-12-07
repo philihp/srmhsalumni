@@ -46,24 +46,18 @@ const Profile = () => {
       <InputText label="Given Name" value={enrollment?.given_name} />
       <InputText label="Surname" value={enrollment?.surname} />
 
-      {/* <pre>
-        {`
-Photo
-Date of birth
-class of (even if you attended 1 year)
+      {/* TODO: Photo */}
 
-would you like to be a class representative?
+      {/* TODO: home phone */}
+      {/* TODO: cell phone */}
+      {/* TODO: email of */}
 
-I understand SRMHS Alumni Association is maintaining an Alumni & Friends directory. I agree to have my profile included.
-Yes
-No
+      {/* TODO: t-shirt size */}
+      {/* TODO: birthday */}
+      {/* TODO: class of */}
+      {/* TODO: be a class rep? */}
 
-email (include in profile?)
-home phone (include in profile?)
-cell phone (include in profile?)
-
-Profile (Markdown)`}
-      </pre> */}
+      {/* TODO: profile */}
     </div>
   )
 }

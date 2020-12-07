@@ -1,0 +1,6 @@
+- args:
+    cascade: false
+    read_only: false
+    sql: ALTER TABLE "public"."enrollments" ALTER COLUMN "profile" TYPE character
+      varying;
+  type: run_sql

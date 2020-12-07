@@ -1,0 +1,39 @@
+- args:
+    role: user
+    table:
+      name: enrollments
+      schema: public
+  type: drop_update_permission
+- args:
+    permission:
+      check:
+        user_id:
+          _eq: X-Hasura-User-Id
+      columns:
+      - address1
+      - address2
+      - address_city
+      - address_state
+      - address_zip
+      - created_at
+      - current_profession
+      - given_name
+      - id
+      - interests
+      - maiden_name
+      - member_type
+      - middle_name
+      - preferred_pronouns
+      - profile
+      - surname
+      - updated_at
+      - user_id
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+      set: {}
+    role: user
+    table:
+      name: enrollments
+      schema: public
+  type: create_update_permission

@@ -21,6 +21,9 @@ const GET_ENROLLMENT = gql`
       created_at
       member_type
       profile
+      user {
+        email
+      }
     }
   }
 `
@@ -43,11 +46,15 @@ const Profile = () => {
 
       <div>Membership Status</div>
       <MembershipStatusIcon memberType={enrollment?.member_type} />
-
-      <p>
+      <div className="italic text-gray-600 pb-4">
         An active membership status is required for inclusion in the alumni
         directory.
-      </p>
+      </div>
+
+      <InputText value={enrollment?.user?.email}>
+        <PrivateIcon />
+        Email
+      </InputText>
 
       <InputName
         givenName={enrollment?.given_name}
@@ -94,7 +101,8 @@ const Profile = () => {
         <PublicIcon /> fields will be publicly listed in our directory.
         <br />
         <PrivateIcon /> fields will be kept private, available only to the
-        Alumni Association board.
+        Alumni Association board. We don&apos;t sell your info, it ain&apos;t
+        like that.
       </p>
     </div>
   )

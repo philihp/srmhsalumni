@@ -178,95 +178,109 @@ const Membership = () => {
       )}
       <h2>Frequently Asked Questions</h2>
       <p>
-        
-         <b>1. How do I join the Alumni Association?</b> 
-           </p>
-           <p>
-           <b>Online</b>: Only credit/debit cards are accepted online.
-           </p>
-           <p>
-           <b>In person</b>: Stop by Southeast Raleigh Magnet High School and complete a membership
-           application. We can accept checks and certified money orders in person. 
-           Make the check or money order out to Southeast Raleigh Magnet High School Alumni Association and Friends. 
-           Completed application and payment must be placed in a sealed envelope and placed the SRMHS Alumni mailbox.
-           </p>
-           <p>
-            <b>By mail</b>: Complete the Membership Application and mail to it along with payment to 
-             Southeast Raleigh Magnet Hight School at 2600 Rock Quarry Rd, Raleigh, NC 27610.
-          </p>
-          <p>
-         <b>2.	What is the cost to be a member?</b> 
-           </p>
-           <p>
-                  The cost of a membership is $100.00 per year or a one-time fee of $1000.00 for a lifetime membership.
-         </p>
-         <p>
-           <b>3.	When do I complete my membership profile?</b> 
-         </p>
-         <p>
-                  After your payment is accepted, you will then be directed to complete your profile page. 
-         </p>
-         <p>
-          <b>4.	Do I have to be an alumnus of Southeast Raleigh Magnet High School?</b>
-         </p>
-         <p>
-                  No! Our membership plans and benefits are geared towards SRMHS grads, but membership is not only limited to graduates of the high school. 
-                  If you attended SRMHS school for at least 1 year, you could become a member. 
-                  If you currently work at SRMHS as faculty or staff, and 
-                  If you are a member of the community that holds the same values and purpose of the association; you can also become a member. 
-         </p>
-         <p>
-          <b>5.	What comes with the membership?</b> 
-         </p>
-         <p>
-                  As a member of the SRMHS Alumni Association there are many perks and benefits. As a member you receive:
-                  (1) Special seating at select sporting games held at the school,
-                  (2) Select promotional items provided by the association, 
-                  (3) Opportunities to apply for special scholarships for students/children of alumni who attend SRMHS,
-                  (4) Invitations to special events held by the association at a discounted price, and other benefits. 
-         </p>
-         <p>
-                  As a lifetime member, you will receive all the afore mentioned benefits as well as free admission to one Alumni event during your 
-                  first year of membership and then a 50% off the cost of future events. 
-         </p>
-         <p>
-                   As an active member you will also have the right to vote at all meetings, and shall be eligible for appointment to committees 
-                   and to hold office in accordance with the by-laws of the association.
-         </p>
-         <p> 
-           <b>6.	Is there an annual fee for membership?</b>
-         </p>
-         <p>       
-                  Yes, the annual fee is $100
-         </p>
-         <p>  
-            <b>7.	Married couple discounts?</b> 
-         </p>
-         <p>  
-                  No, we do not have a discount for married couples 
-         </p>
-         <p>
-             <b>8.	What is the different between a lifetime member vs. regular membership?</b> 
-         </p>
-         <p>  
-                  A regular membership has an annual cost of $100.  The lifetime membership has a one-time fee of $1000. 
-                  A lifetime membership also provides a discounted cost to Alumni events. 
-         </p>
-         <p>
-             <b>9.	Where does the money I pay for membership go to?</b>
-         </p>
-         <p>  
-                  The Alumni Association will allocate the resources provided by members via membership costs and donations to pay for events held by the association, 
-                  scholarships provided to students, as well as to the school itself. As a member, you will have the opportunity to view and vote on budgets provided 
-                  by the financial committee. 
-         </p>
-         <p>
-             <b>10.	How can I cancel my membership?</b>
-         </p>
-         <p>  
-                  If you ever want to cancel your membership for any reason, please email srmhsalumni@gmail.com for assistance.  
-                  Please note there will not be any refunds provided for cancelled memberships. 
- 
+        <b>1. How do I join the Alumni Association?</b>
+      </p>
+      <p>
+        <b>Online</b>: Only credit/debit cards are accepted online.
+      </p>
+      <p>
+        <b>In person</b>: Stop by Southeast Raleigh Magnet High School and
+        complete a membership application. We can accept checks and certified
+        money orders in person. Make the check or money order out to Southeast
+        Raleigh Magnet High School Alumni Association and Friends. Completed
+        application and payment must be placed in a sealed envelope and placed
+        the SRMHS Alumni mailbox.
+      </p>
+      <p>
+        <b>By mail</b>: Complete the Membership Application and mail to it along
+        with payment to Southeast Raleigh Magnet Hight School at 2600 Rock
+        Quarry Rd, Raleigh, NC 27610.
+      </p>
+      <p>
+        <b>2. What is the cost to be a member?</b>
+      </p>
+      <p>
+        The cost of a membership is $100.00 per year or a one-time fee of
+        $1000.00 for a lifetime membership.
+      </p>
+      <p>
+        <b>3. When do I complete my membership profile?</b>
+      </p>
+      <p>
+        After your payment is accepted, you will then be directed to complete
+        your profile page.
+      </p>
+      <p>
+        <b>
+          4. Do I have to be an alumnus of Southeast Raleigh Magnet High School?
+        </b>
+      </p>
+      <p>
+        No! Our membership plans and benefits are geared towards SRMHS grads,
+        but membership is not only limited to graduates of the high school. If
+        you attended SRMHS school for at least 1 year, you could become a
+        member. If you currently work at SRMHS as faculty or staff, and If you
+        are a member of the community that holds the same values and purpose of
+        the association; you can also become a member.
+      </p>
+      <p>
+        <b>5. What comes with the membership?</b>
+      </p>
+      <p>
+        As a member of the SRMHS Alumni Association there are many perks and
+        benefits. As a member you receive: (1) Special seating at select
+        sporting games held at the school, (2) Select promotional items provided
+        by the association, (3) Opportunities to apply for special scholarships
+        for students/children of alumni who attend SRMHS, (4) Invitations to
+        special events held by the association at a discounted price, and other
+        benefits.
+      </p>
+      <p>
+        As a lifetime member, you will receive all the afore mentioned benefits
+        as well as free admission to one Alumni event during your first year of
+        membership and then a 50% off the cost of future events.
+      </p>
+      <p>
+        As an active member you will also have the right to vote at all
+        meetings, and shall be eligible for appointment to committees and to
+        hold office in accordance with the by-laws of the association.
+      </p>
+      <p>
+        <b>6. Is there an annual fee for membership?</b>
+      </p>
+      <p>Yes, the annual fee is $100</p>
+      <p>
+        <b>7. Married couple discounts?</b>
+      </p>
+      <p>No, we do not have a discount for married couples</p>
+      <p>
+        <b>
+          8. What is the different between a lifetime member vs. regular
+          membership?
+        </b>
+      </p>
+      <p>
+        A regular membership has an annual cost of $100. The lifetime membership
+        has a one-time fee of $1000. A lifetime membership also provides a
+        discounted cost to Alumni events.
+      </p>
+      <p>
+        <b>9. Where does the money I pay for membership go to?</b>
+      </p>
+      <p>
+        The Alumni Association will allocate the resources provided by members
+        via membership costs and donations to pay for events held by the
+        association, scholarships provided to students, as well as to the school
+        itself. As a member, you will have the opportunity to view and vote on
+        budgets provided by the financial committee.
+      </p>
+      <p>
+        <b>10. How can I cancel my membership?</b>
+      </p>
+      <p>
+        If you ever want to cancel your membership for any reason, please email
+        srmhsalumni@gmail.com for assistance. Please note there will not be any
+        refunds provided for cancelled memberships.
       </p>
     </div>
   )

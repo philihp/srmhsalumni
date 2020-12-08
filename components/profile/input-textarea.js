@@ -1,15 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const InputText = ({ children, value, autoComplete }) => {
+const InputText = ({ children, value }) => {
   return (
     <label>
       <div>{children}</div>
-      <input
-        type="text"
-        className="form-input border rounded shadow-lg"
+      <textarea
+        className="form-textarea block w-full border rounded shadow-lg"
+        rows="20"
         value={value}
-        autoComplete={autoComplete}
       />
     </label>
   )
@@ -18,13 +17,11 @@ const InputText = ({ children, value, autoComplete }) => {
 InputText.propTypes = {
   children: PropTypes.any,
   value: PropTypes.string,
-  autoComplete: PropTypes.string,
 }
 
 InputText.defaultProps = {
   children: () => <></>,
   value: '',
-  autoComplete: '',
 }
 
 export default InputText

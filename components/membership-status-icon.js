@@ -27,7 +27,9 @@ const inner = (memberType) => {
 }
 
 const MembershipStatusIcon = ({ memberType }) => (
-  <div className="border rounded w-1/3 shadow-lg px-2">{inner(memberType)}</div>
+  <div className="border rounded w-1/3 shadow-lg p-2 bg-gray-100">
+    {inner(memberType)}
+  </div>
 )
 
 MembershipStatusIcon.propTypes = {

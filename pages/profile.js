@@ -73,7 +73,7 @@ const Profile = () => {
     updateEnrollment,
     { loading: updateLoading, error: updateError },
   ] = useMutation(UPDATE_ENROLLMENT, {
-    onCompleted: () => router.push('/directory'),
+    onCompleted: (o) => router.push(`/user/${o.insert_enrollments_one.id}`),
   })
   const enrollment = data?.enrollments?.[0]
 

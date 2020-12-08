@@ -1,7 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const InputText = ({ children, givenName, surname }) => {
+const InputName = ({
+  children,
+  givenName,
+  surname,
+  onGivenNameChange,
+  onSurnameChange,
+}) => {
   return (
     <label>
       <div>{children}</div>
@@ -9,28 +15,32 @@ const InputText = ({ children, givenName, surname }) => {
         type="text"
         className="form-input mr-1 w-1/3 inline border rounded shadow-lg"
         value={givenName}
+        onChange={onGivenNameChange}
         autoComplete="given-name"
       />
       <input
         type="text"
         className="form-input mr-1 w-1/3 inline border rounded shadow-lg"
         value={surname}
+        onChange={onSurnameChange}
         autoComplete="family-name"
       />
     </label>
   )
 }
 
-InputText.propTypes = {
+InputName.propTypes = {
   children: PropTypes.any,
   givenName: PropTypes.string,
   surname: PropTypes.string,
+  onGivenNameChange: PropTypes.func.isRequired,
+  onSurnameChange: PropTypes.func.isRequired,
 }
 
-InputText.defaultProps = {
+InputName.defaultProps = {
   children: () => <></>,
   givenName: 'John',
   surname: 'Modest',
 }
 
-export default InputText
+export default InputName

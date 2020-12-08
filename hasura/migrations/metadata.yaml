@@ -120,6 +120,20 @@ tables:
       filter: {}
 - table:
     schema: public
+    name: public_enrollments
+  select_permissions:
+  - role: user
+    permission:
+      columns:
+      - class_of
+      - given_name
+      - id
+      - member_type
+      - profile
+      - surname
+      filter: {}
+- table:
+    schema: public
     name: users
   object_relationships:
   - name: enrollment

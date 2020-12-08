@@ -33,7 +33,11 @@ const MembershipStatusIcon = ({ memberType }) => (
 )
 
 MembershipStatusIcon.propTypes = {
-  memberType: PropTypes.string.isRequired,
+  memberType: PropTypes.string,
+}
+
+MembershipStatusIcon.defaultProps = {
+  memberType: undefined,
 }
 
 export default MembershipStatusIcon

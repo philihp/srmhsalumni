@@ -1,0 +1,13 @@
+- args:
+    cascade: false
+    read_only: false
+    sql: |-
+      create or replace view public_enrollments as
+      select id, member_type, class_of, given_name, surname
+        from enrollments
+        where member_type in ('annual_paid', 'lifetime_paid');
+  type: run_sql
+- args:
+    name: public_enrollments
+    schema: public
+  type: add_existing_table_or_view

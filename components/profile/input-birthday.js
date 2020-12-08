@@ -9,7 +9,7 @@ const months = () =>
     return [i + 1, monthName]
   })
 
-const InputBirthday = ({ children, year, month, day }) => {
+const InputBirthday = ({ children, year, month, day, onChange }) => {
   return (
     <label>
       <div>{children}</div>
@@ -19,10 +19,12 @@ const InputBirthday = ({ children, year, month, day }) => {
         value={month}
         placeholder="MM"
         autoComplete="bday-month"
+        onChange={(e) => onChange(`${year}-${e.target.value}-${day}`)}
+        defaultValue={month}
       >
         <option />
         {months().map(([mm, mon]) => (
-          <option aria-label={mon} selected={mm === month} value={mm}>
+          <option key={mon} aria-label={mon} value={mm}>
             {mon}
           </option>
         ))}
@@ -34,6 +36,7 @@ const InputBirthday = ({ children, year, month, day }) => {
         className="form-input inline mx-1 border rounded shadow-lg"
         name="day"
         value={day}
+        onChange={(e) => onChange(`${year}-${month}-${e.target.value}`)}
         placeholder="DD"
         autoComplete="bday-day"
       />
@@ -43,6 +46,7 @@ const InputBirthday = ({ children, year, month, day }) => {
         max={new Date().getFullYear() - 10}
         className="form-input inline border rounded shadow-lg"
         name="year"
+        onChange={(e) => onChange(`${e.target.value}-${month}-${day}`)}
         value={year}
         placeholder="YYYY"
         autoComplete="bday-year"
@@ -56,6 +60,7 @@ InputBirthday.propTypes = {
   year: PropTypes.number,
   month: PropTypes.number,
   day: PropTypes.number,
+  onChange: PropTypes.func,
 }
 
 InputBirthday.defaultProps = {
@@ -63,6 +68,7 @@ InputBirthday.defaultProps = {
   year: undefined,
   month: undefined,
   day: undefined,
+  onChange: () => {},
 }
 
 export default InputBirthday

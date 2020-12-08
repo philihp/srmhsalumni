@@ -4,28 +4,34 @@ import PropTypes from 'prop-types'
 export const graduatingYears = () =>
   Array.from({ length: new Date().getFullYear() - 2000 }, (_, i) => 2001 + i)
 
-const InputText = ({ children, value }) => {
+const InputClassOf = ({ children, value, onChange }) => {
   return (
     <label>
       <div>{children}</div>
-      <select className="form-select block border rounded shadow-lg">
+      <select
+        className="form-select block border rounded shadow-lg"
+        onChange={(e) => onChange(e.target.value)}
+        value={value}
+      >
         <option />
         {graduatingYears().map((y) => (
-          <option selected={value === y}>{y}</option>
+          <option key={y}>{y}</option>
         ))}
       </select>
     </label>
   )
 }
 
-InputText.propTypes = {
+InputClassOf.propTypes = {
   children: PropTypes.any,
-  value: PropTypes.string,
+  value: PropTypes.any,
+  onChange: PropTypes.func,
 }
 
-InputText.defaultProps = {
+InputClassOf.defaultProps = {
   children: () => <></>,
-  value: '',
+  value: 2002,
+  onChange: () => {},
 }
 
-export default InputText
+export default InputClassOf

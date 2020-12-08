@@ -1,0 +1,18 @@
+- args:
+    permission:
+      allow_aggregations: false
+      backend_only: false
+      columns:
+      - id
+      - member_type
+      - class_of
+      - given_name
+      - surname
+      computed_fields: []
+      filter: {}
+      limit: null
+    role: user
+    table:
+      name: public_enrollments
+      schema: public
+  type: create_select_permission

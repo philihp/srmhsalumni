@@ -1,0 +1,12 @@
+- args:
+    cascade: false
+    read_only: false
+    sql: |-
+      create or replace view enrollments_directory as
+      select id, member_type, class_of, given_name, surname
+        from enrollments;
+  type: run_sql
+- args:
+    name: enrollments_directory
+    schema: public
+  type: add_existing_table_or_view

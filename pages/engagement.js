@@ -104,24 +104,11 @@ const Engagement = () => (
     <p>
       The purpose of the Membership &amp; Outreach Committee is to reach out to,
       encourage, and maintain the membership in the SRMHS Alumni Association.
-      The Membership committee works to ensure that alumni feel welcomed and
+      The Membership committee works to ensure that alumni and friends feel welcomed and
       included at local events sponsored by the Alumni Association. The
       committee also works to grow the board applicant pool and increase the
       number of alumni participating in the various boards and committees that
-      comprise the Alumni Association. These committee members are asked to
-      attend Alumni Association events as often as possible to help with
-      membership &amp; outreach. This committee will encourage students to
-      become involved upon graduation. They will coordinate with various
-      constituent groups within the school and alumni community to improve
-      alumni engagement, attendance, and donations to SRMHS. This committee will
-      aim to foster good relations between students and alumni. They will
-      develop ideas for outreach to the alumni of SRMHS. This will provide
-      alumni with opportunities to meet fellow alumni in a social gathering that
-      fosters networking and personal interaction. They will plan and implement
-      social gathers as an outreach to our alumni community. They will work
-      closely with the Events, Fundraising &amp; Programs committee. This
-      committee will maintain and make available a completed and updated list of
-      all members-at large and their suggestions to the Association
+      comprise the Alumni Association. 
     </p>
 
     <h2>Class Representatives</h2>

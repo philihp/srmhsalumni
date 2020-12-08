@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const InputText = ({ children, value }) => {
+const InputTextarea = ({ children, value, onChange }) => {
   return (
     <label>
       <div>{children}</div>
@@ -9,19 +9,22 @@ const InputText = ({ children, value }) => {
         className="form-textarea block w-full border rounded shadow-lg"
         rows="20"
         value={value}
+        onChange={(e) => onChange(e.target.value)}
       />
     </label>
   )
 }
 
-InputText.propTypes = {
+InputTextarea.propTypes = {
   children: PropTypes.any,
   value: PropTypes.string,
+  onChange: PropTypes.func,
 }
 
-InputText.defaultProps = {
+InputTextarea.defaultProps = {
   children: () => <></>,
   value: '',
+  onChange: () => {},
 }
 
-export default InputText
+export default InputTextarea

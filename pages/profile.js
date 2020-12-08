@@ -112,6 +112,7 @@ const Profile = () => {
       }}
     >
       <h1>Profile</h1>
+
       {selectError && <Warning>{JSON.stringify(selectError?.message)}</Warning>}
 
       <div>Membership Status</div>
@@ -120,12 +121,10 @@ const Profile = () => {
         An active membership status is required for inclusion in the alumni
         directory.
       </div>
-
       <InputText value={enrollment?.user?.email}>
         <PrivateIcon />
         Email
       </InputText>
-
       <InputName
         givenName={givenName}
         surname={surname}
@@ -134,13 +133,11 @@ const Profile = () => {
       >
         <PublicIcon /> Name
       </InputName>
-
       {/* TODO: Photo */}
       {/* TODO: home phone, autoComplete="tel home"  */}
       {/* TODO: cell phone, autoComplete="tel mobile" */}
       {/* TODO: email of autoComplete="email home" */}
       {/* TODO: be a class rep? */}
-
       <InputText value={tshirtSize} onChange={setTshirtSize}>
         <PrivateIcon /> T-Shirt Size
       </InputText>
@@ -150,7 +147,6 @@ const Profile = () => {
       <InputClassOf value={classOf} onChange={setClassOf}>
         <PublicIcon /> Class Of
       </InputClassOf>
-
       <InputTextarea value={profile} onChange={setProfile}>
         <PublicIcon /> Profile (
         <a
@@ -162,7 +158,6 @@ const Profile = () => {
         </a>
         )
       </InputTextarea>
-
       {updateError && <Warning>{JSON.stringify(updateError?.message)}</Warning>}
       <button
         className="mt-4 lg:mt-6 form-input bg-indigo-600 hover:bg-indigo-700 text-white justify-center w-1/3 cursor-pointer rounded shadow"

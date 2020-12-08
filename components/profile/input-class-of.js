@@ -11,7 +11,7 @@ const InputClassOf = ({ children, value, onChange }) => {
       <select
         className="form-select block border rounded shadow-lg"
         onChange={(e) => onChange(e.target.value)}
-        defaultValue={value}
+        value={value}
       >
         <option />
         {graduatingYears().map((y) => (

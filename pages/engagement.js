@@ -93,23 +93,11 @@ const Engagement = () => (
 
     <h3>Finance &amp; Audit</h3>
     <p>
-      The Finance &amp; Audit Committee shall ensure a comprehensive budgeting
-      system that will enable the association to keep revenue and expense in
-      balance and to increase the association&#39;s reserves and investments,
-      thus ensuring the financial stability of the association. This committee
-      will supervise the annual budget, review and audit the financial affairs
-      of the alumni association, search for potential sponsors and produce
-      financial statements. The Finance Committee has primary responsibility for
+      The Finance Committee has primary responsibility for
       maintaining the financial assets of the Association and reviewing the
       expenditures made by the Association. This committee assists in preparing
       SRMHS program-by- program budgetary procedures and accepting committee
-      budget requests. Each SRMHS committee shall submit a budget request to the
-      Finance Committee. (If applicable) The Finance committee shall submit all
-      approved requests to the Executive Board for final approval. The Finance
-      Committee shall work with the treasurer to compare revenues and expenses,
-      including details on how the funds are spent and the balances in each
-      line-item. This committee will oversee the audit and present financial
-      results.
+      budget requests. 
     </p>
 
     <h3>Membership &amp; Outreach</h3>

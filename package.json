@@ -48,7 +48,7 @@
     "@fullhuman/postcss-purgecss": "3.0.0",
     "@philihp/eslint-config": "4.2.0",
     "@zeit/next-css": "1.0.1",
-    "autoprefixer": "10.0.4",
+    "autoprefixer": "10.1.0",
     "bdd-lazy-var": "2.5.5",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.5",

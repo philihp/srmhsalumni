@@ -18,6 +18,7 @@ module.exports = {
     'react/prop-types': 'off', // turn off now, turn on maybe never?
     'unicorn/filename-case': 'off',
     'jsx-a11y/label-has-associated-control': ['error', { assert: 'either' }],
+    'jsx-a11y/control-has-associated-label': [1, {}],
   },
   ignorePatterns: [
     'auth0/rules/*.js',

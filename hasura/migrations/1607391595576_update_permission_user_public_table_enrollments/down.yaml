@@ -1,0 +1,40 @@
+- args:
+    role: user
+    table:
+      name: enrollments
+      schema: public
+  type: drop_insert_permission
+- args:
+    permission:
+      backend_only: false
+      check:
+        user_id:
+          _eq: X-Hasura-User-Id
+      columns:
+      - birthday
+      - class_of
+      - profile
+      - created_at
+      - updated_at
+      - id
+      - address1
+      - address2
+      - address_city
+      - address_state
+      - address_zip
+      - current_profession
+      - given_name
+      - interests
+      - maiden_name
+      - member_type
+      - middle_name
+      - preferred_pronouns
+      - surname
+      - tshirt_size
+      - user_id
+      set: {}
+    role: user
+    table:
+      name: enrollments
+      schema: public
+  type: create_insert_permission

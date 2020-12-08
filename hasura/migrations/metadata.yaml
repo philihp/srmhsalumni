@@ -14,26 +14,25 @@ tables:
         user_id:
           _eq: X-Hasura-User-Id
       columns:
-      - birthday
-      - class_of
-      - profile
-      - created_at
-      - updated_at
-      - id
       - address1
       - address2
       - address_city
       - address_state
       - address_zip
+      - birthday
+      - class_of
+      - created_at
       - current_profession
       - given_name
+      - id
       - interests
       - maiden_name
-      - member_type
       - middle_name
       - preferred_pronouns
+      - profile
       - surname
       - tshirt_size
+      - updated_at
       - user_id
       backend_only: false
   select_permissions:

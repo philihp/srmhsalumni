@@ -125,10 +125,11 @@ tables:
   - role: user
     permission:
       columns:
-      - id
-      - member_type
       - class_of
       - given_name
+      - id
+      - member_type
+      - profile
       - surname
       filter: {}
 - table:

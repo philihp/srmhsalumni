@@ -50,7 +50,7 @@
     "@philihp/eslint-config": "4.2.0",
     "@zeit/next-css": "1.0.1",
     "autoprefixer": "10.1.0",
-    "bdd-lazy-var": "2.5.5",
+    "bdd-lazy-var": "2.6.0",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.5",
     "husky": "5.0.4",

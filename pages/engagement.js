@@ -53,24 +53,14 @@ const Engagement = () => (
 
     <h3>Career/College Preparation</h3>
     <p>
-      The Career &amp; College preparation committee provides guidance and
-      support to Career Services and the students of SRMHS. This committee will
-      aim to increase interactions between students and alumni for
-      career-related issues and to facilitate the relationship between the
-      Career Services and the Alumni Association. This committee will support
-      the professional development of the SRMHS students. The committee shall
-      identify and define professional development strategies, tactics, and
-      metrics in collaboration with the Career Services. The key tasks of the
-      committee are to identify and define ways in which alumni can support
-      students’ exploration of career paths, share best practices from life
-      experiences, and offer suggestions. The goal is to enhance academic and
-      career success by connecting alumni volunteers with students, faculty,
-      administration, and peers. The committee will be dedicated to exploring
-      opportunities for alumni to provide career guidance to current students,
-      networking &amp; mentorship opportunities, refer internships, and
-      collaborate with Career Services to explore career development
-      opportunities.
-    </p>
+      The Career & College preparation committee This committee will aim to increase
+      interactions between students and alumni for career-related issues and to facilitate 
+      the relationship between the Career Services and the Alumni Association. 
+      The key tasks of the committee are to identify and define ways in which alumni can support students' 
+      exploration of career paths, share best practices from life experiences, and offer suggestions.
+      The goal is to enhance academic and career success by connecting alumni volunteers with students, faculty, 
+      administration, and peers.
+  </p>
 
     <h3>Events, Fundraising, &amp; Programs </h3>
     <p>

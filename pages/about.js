@@ -28,7 +28,7 @@ const About = () => (
       statement, foster campus traditions, and provide a dynamic legacy for
       current and future Alumni of SRMHS
     </p>
-    <p>
+   </div>  
   
     <h2>Board</h2>
     <div className="flex flex-wrap">

@@ -18,7 +18,6 @@ const About = () => (
       To champion a lifelong relationship between Southeast Raleigh Magnet High
       School and alumni.
     </p>
-    <p>  
   <h2>Vision</h2>
     <p>
       The Southeast Raleigh Magnet High School Alumni Association is a

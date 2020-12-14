@@ -16,6 +16,7 @@ const Support = () => (
      You can also support the SRMHS Football team and the school by purchases gear! 
      <a href= "https://www.bsnteamsports.com/shop/DAWG20FB>
        SRMHS Football Gear
+     </a>   
   </div>
 )
 

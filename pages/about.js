@@ -28,6 +28,8 @@ const About = () => (
       statement, foster campus traditions, and provide a dynamic legacy for
       current and future Alumni of SRMHS
     </p>
+    <p>
+  
     <h2>Board</h2>
     <div className="flex flex-wrap">
       <StaffCard name="Tylisa Finley" title="President" src="/Tylisa.jpg" />

@@ -4,7 +4,7 @@ const Support = () => (
   <div>
     <p>
       Our booster club is running a fundraiser to help the football team raise
-      funds. Please help out! Any and everything you can do helps! #gobulldogs
+      funds. Please click the link below help out! Any and everything you can do helps! #gobulldogs
       #BULLDOGPRIDE
     </p>
     <p>

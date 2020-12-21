@@ -41,8 +41,8 @@ const Engagement = () => (
       focuses on identifying prospective partners, reaching out and working with the 
       partners to define the shared goals and outcomes.
     </p>
-    <p>Chairperson - Jess</p>
-    <p>Co-chair - Des</p>
+    <p>Chairperson - Des</p>
+    <p>Co-chair - Jess</p>
 
     <h3>Career/College Preparation</h3>
     <p>

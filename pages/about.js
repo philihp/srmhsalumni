@@ -18,7 +18,7 @@ const About = () => (
       To champion a lifelong relationship between Southeast Raleigh Magnet High
       School and alumni.
     </p>
-   
+
     <h2>Board</h2>
     <div className="flex flex-wrap">
       <StaffCard name="Tylisa Finley" title="President" src="/Tylisa.jpg" />

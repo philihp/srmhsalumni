@@ -51,21 +51,12 @@ const Engagement = () => (
 
     <h3>Events, Fundraising, &amp; Programs </h3>
     <p>
-      The Events, Fundraising, &amp; Programs Committee is responsible for
-      assisting in the implementation and execution of events that foster
-      relations between alumni, staff, students, and the community. This
-      committee oversees the creation and implementation of all events,
+      This committee oversees the creation and implementation of all events,
       fundraisers, and programs to advance our mission, transition students to
       the alumni ranks, and bring members together in an organized setting. The
       Committee helps to plan, coordinate, and implement programs and/or events
       that will engage alumni and hold events that will connect alumni with
-      SRMHS. This committee will establish a base of active alumni who can help
-      with various fund-raising activities to maximize contributions, draw on
-      the experience of fellow alumni, department heads, students and teachers
-      to gather and coordinate a wide range of ideas into goals and objectives
-      in the future. This committee will update the SRMHS calendar with all
-      events and programs for each fiscal year and work with the communications
-      committee to ensure all events are properly promoted.
+      SRMHS.
     </p>
 
     <h3>Finance &amp; Audit</h3>

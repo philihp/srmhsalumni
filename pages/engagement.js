@@ -14,7 +14,7 @@ const Engagement = () => (
       tally votes for the selected recipients of any SRMHS Alumni Association
       awards, scholarships, and/or positions.
     </p>
-    <p>Chairperson - Tylisa</p>
+    <p>Chairperson - Tylisa Finley</p>
 
     <h3>Communications, Marketing, &amp; Digital Engagement</h3>
 
@@ -28,8 +28,8 @@ const Engagement = () => (
       website up to date as the organization develops. The committee will work with the Class
       Representations to create ways to share the information in engaging ways.
     </p>
-    <p>Chairperson - Jess</p>
-    <p>Co-chair - Des</p>
+    <p>Chairperson - Jess Moore Matthews</p>
+    <p>Co-chair - Des Woods</p>
 
     <h3>Community Service and Partnerships</h3>
     <p>
@@ -41,8 +41,8 @@ const Engagement = () => (
       focuses on identifying prospective partners, reaching out and working with the 
       partners to define the shared goals and outcomes.
     </p>
-    <p>Chairperson - Des</p>
-    <p>Co-chair - Jess</p>
+    <p>Chairperson - Des Woods</p>
+    <p>Co-chair - Jess Moore Matthews</p>
 
     <h3>Career/College Preparation</h3>
     <p>
@@ -55,7 +55,7 @@ const Engagement = () => (
       connecting alumni volunteers with students, faculty, administration, and
       peers.
     </p>
-    <p>Chairperson - Tiffany</p>   
+    <p>Chairperson - Tiffany Tate</p>   
    
     <h3>Events, Fundraising, &amp; Programs </h3>
     <p>
@@ -66,8 +66,8 @@ const Engagement = () => (
       that will engage alumni and hold events that will connect alumni with
       SRMHS.
     </p>
-    <p>Chairperson - Jasmyne</p>
-    <p>Co-Chair - Myshaina</p>
+    <p>Chairperson - Jasmyne Ormond</p>
+    <p>Co-Chair - Myshaina Kehinde</p>
    
     <h3>Finance &amp; Audit</h3>
     <p>
@@ -76,7 +76,7 @@ const Engagement = () => (
       the Association. This committee assists in preparing SRMHS program-by-
       program budgetary procedures and accepting committee budget requests.
     </p>
-    <p>Chairperson - Myshaina</p>
+    <p>Chairperson - Myshaina Kehinde</p>
 
     <h3>Membership &amp; Outreach</h3>
     <p>
@@ -88,7 +88,7 @@ const Engagement = () => (
       number of alumni participating in the various boards and committees that
       comprise the Alumni Association.
     </p>
-    <p>Chairperson - Clarissa</p>
+    <p>Chairperson - Clarissa Jones</p>
 
     <h2>Class Representatives</h2>
     <p>

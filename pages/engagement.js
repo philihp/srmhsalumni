@@ -6,8 +6,8 @@ const Engagement = () => (
   
     <h2>Committees</h2>
     <h3>Awards, Scholarships &amp; Nominations</h3>
+    <p>Chair- Tylisa</p>
     <p>
-    Chair- Tylisa 
       The Awards, Scholarships, &amp; Nominations Committee will collect and
       review nominations for all designated awards, scholarships, and positions.
       This committee will create the applications for all required awards,

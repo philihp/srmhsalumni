@@ -2,7 +2,8 @@ import React from 'react'
 import StaffCard from '../components/staff-card'
 
 const About = () => (
-  <div>
+  // CSS Class
+  <div className="text-base">
     <h2>Mission</h2>
     <p>
       The Southeast Raleigh Magnet High School Alumni Association is a

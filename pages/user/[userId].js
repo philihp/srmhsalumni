@@ -14,7 +14,7 @@ const GET_PROFILE = gql`
 `
 
 const Profile = ({ enrollment }) => {
-  const { profile, surname, givenName } = enrollment
+  const { profile, surname, givenName } = enrollment || {}
 
   return (
     <div>
@@ -32,6 +32,7 @@ export const getStaticPaths = async () => ({
 })
 
 export const getStaticProps = async ({ params: { userId } }) => {
+  console.log('generating', userId)
   const { data } = await apollo.query({
     query: GET_PROFILE,
     variables: { userId },

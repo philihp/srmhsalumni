@@ -39,8 +39,7 @@ const Engagement = () => (
 
     <h3>Career/College Preparation</h3>
     <p>
-      The Career & College preparation committee This committee will aim to
-      increase interactions between students and alumni for career-related
+      This committee will aim to increase interactions between students and alumni for career-related
       issues and to facilitate the relationship between the Career Services and
       the Alumni Association. The key tasks of the committee are to identify and
       define ways in which alumni can support students&apos; exploration of

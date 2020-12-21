@@ -16,21 +16,14 @@ const Engagement = () => (
     <h3>Communications, Marketing, &amp; Digital Engagement</h3>
 
     <p>
-      The Communications, Marketing, &amp; Digital Engagement committee mission
-      is to serve fellow alums by connecting with them and keeping them informed
-      on current events with the SRMHS Alumni Association. This committee will
-      maintain a positive image for SRMHS Alumni Association and utilize all
-      airways to keep in touch with alumni, students, staff, and the community.
-      This committee is responsible for keeping staff, alumni, students, and the
-      community engaged through an effective and efficient communication system.
-      They will create the media strategy and communicate all messaging,
-      programs, events, fundraisers to members and students electronically,
-      print materials, displays, oral presentations, social media, and any other
-      multimedia. This committee will keep the SRMHS Alumni Association website
-      up to date as the Association develops. They will work with the Class
-      Representations to provide proper messaging for all communication. This
-      committee will create ways to share the Alumni Association information in
-      engaging ways.
+      The Communications, Marketing, &amp; Digital Engagement committee connects alum
+      to current events and informaiton related to the SRMHS Alumni Assoication. 
+      This committee maintains a positive image for SRMHS Alumni Association and utilize all
+      platefoms to keep in touch with alumni, students, staff, and the community.
+      This committee is responsible for keeping everyone engaged through an effective and 
+      efficient communication system by creating a media strategy and keeping the SRMHS Alumni 
+      website up to date as the organization develops. The committee will work with the Class
+      Representations to create ways to share the information in engaging ways.
     </p>
 
     <h3>Community Service and Partnerships</h3>

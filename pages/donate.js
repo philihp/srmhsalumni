@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
+import cx from 'classnames'
 import { loadStripe } from '@stripe/stripe-js'
 import { withApollo } from '../lib/withApollo'
 import { useFetchUser } from '../lib/user'
 
 const stripePromise = loadStripe(process.env.STRIPE_PUBLIC)
 
-const gotoPayment = async ({ email }) => {
+const gotoPayment = async ({ amount, email }) => {
   const body = JSON.stringify({
-    amount: 1234,
+    amount,
     customer_email: email,
   })
   const { sessionId } = await fetch('/api/stripe/donate', {
@@ -17,9 +18,7 @@ const gotoPayment = async ({ email }) => {
     },
     body,
   }).then((res) => res.json())
-  console.log({ sessionId })
   const stripe = await stripePromise
-  console.log({ sessionId })
   const { error } = await stripe.redirectToCheckout({ sessionId })
   if (error) console.error(error)
 }
@@ -31,7 +30,11 @@ const LoadingUser = () => (
 )
 
 const Donate = () => {
-  const { user, loading: userLoading } = useFetchUser({ required: true })
+  const { user, loading: userLoading } = useFetchUser({ required: false })
+  const [email, setEmail] = useState('')
+  const [emailBordered, setEmailBordered] = useState(false)
+  const [amount, setAmount] = useState('50.00')
+
   return (
     <div>
       <h2>Donate</h2>
@@ -43,26 +46,45 @@ const Donate = () => {
           className="bg-blue-100 shadow-xl rounded p-4 flex flex-col"
           onSubmit={(e) => {
             e.preventDefault()
-            gotoPayment({ email: user.name })
+            if (user?.name || email) {
+              setEmailBordered(false)
+              gotoPayment({
+                email: user?.name ?? email,
+                amount: Number.parseFloat(amount) * 100,
+              })
+            } else {
+              setEmailBordered(true)
+            }
           }}
         >
           <label>
-            <div className="mt-4">Name</div>
-            <input
-              className="form-input border rounded shadow-md"
-              id="name"
-              type="text"
-              name="name"
-            />
-          </label>
-          <label>
             <div className="mt-4">Email</div>
-            <input
-              className="form-input border rounded shadow-md"
-              id="email"
-              type="text"
-              name="email"
-            />
+            {user?.name && (
+              <input
+                id="email"
+                className="form-input rounded opacity-50 shadow-md"
+                value={user?.name}
+                readOnly
+              />
+            )}
+            {!user?.name && (
+              <input
+                className={cx(
+                  'form-input',
+                  {
+                    border: !emailBordered,
+                    'border-2': emailBordered,
+                    'border-red-500': emailBordered,
+                  },
+                  'rounded shadow-md'
+                )}
+                id="email"
+                type="text"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            )}
           </label>
           <label>
             <div className="mt-4">Amount</div>
@@ -70,7 +92,11 @@ const Donate = () => {
               className="form-input border rounded shadow-md"
               id="amount"
               type="number"
+              step="0.01"
+              min="5"
               name="amount"
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
             />
           </label>
           <div className="mt-8">

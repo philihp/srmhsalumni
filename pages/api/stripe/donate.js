@@ -11,14 +11,14 @@ export default async function donate(req, res) {
           price_data: {
             unit_amount: amount,
             currency: 'usd',
-            product: 'prod_IYwKqBSozmTMFr',
+            product: process.env.STRIPE_DONATION_PRICE_ID,
           },
           quantity: 1,
         },
       ],
       mode: 'payment',
       success_url: `${req.headers.origin}/api/stripe/success?sessionId={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${req.headers.origin}/membership`,
+      cancel_url: `${req.headers.origin}/donate`,
     })
     return res.status(200).json({ sessionId: ses.id })
   }

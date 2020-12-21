@@ -1,10 +1,10 @@
 import React from 'react'
-import { gql, useSubscription } from '@apollo/react-hooks'
-import { withApollo } from '../../lib/withApollo'
+import { gql } from '@apollo/react-hooks'
 import DirectoryUser from '../../components/directory/user'
+import apollo from '../../lib/apollo/client'
 
-const GET_ENROLLMENT = gql`
-  subscription {
+const GET_ENROLLMENT_LIST = gql`
+  query {
     public_enrollments {
       id
       classOf: class_of
@@ -14,10 +14,7 @@ const GET_ENROLLMENT = gql`
   }
 `
 
-const Payment = () => {
-  const { data } = useSubscription(GET_ENROLLMENT, {})
-  const directory = data?.public_enrollments || []
-
+const Payment = ({ directory }) => {
   return (
     <div>
       <h1>Directory</h1>
@@ -36,4 +33,20 @@ const Payment = () => {
   )
 }
 
-export default withApollo()(Payment)
+export const getStaticPaths = async () => ({
+  paths: [],
+  fallback: true,
+})
+
+export const getStaticProps = async () => {
+  const { data } = await apollo.query({
+    query: GET_ENROLLMENT_LIST,
+  })
+
+  return {
+    props: { directory: data?.public_enrollments || [] },
+    revalidate: 1,
+  }
+}
+
+export default Payment

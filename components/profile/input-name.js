@@ -15,14 +15,14 @@ const InputName = ({
         type="text"
         className="form-input mr-1 w-1/3 inline border rounded shadow-lg"
         value={givenName}
-        onChange={onGivenNameChange}
+        onChange={(e) => onGivenNameChange(e.target.value)}
         autoComplete="given-name"
       />
       <input
         type="text"
         className="form-input mr-1 w-1/3 inline border rounded shadow-lg"
         value={surname}
-        onChange={onSurnameChange}
+        onChange={(e) => onSurnameChange(e.target.value)}
         autoComplete="family-name"
       />
     </label>

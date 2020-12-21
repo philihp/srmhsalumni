@@ -29,6 +29,7 @@ const Engagement = () => (
       Representations to create ways to share the information in engaging ways.
     </p>
     <p>Chairperson - Jess</p>
+    <p>Co-chair - Des</p>
 
     <h3>Community Service and Partnerships</h3>
     <p>
@@ -40,6 +41,8 @@ const Engagement = () => (
       focuses on identifying prospective partners, reaching out and working with the 
       partners to define the shared goals and outcomes.
     </p>
+    <p>Chairperson - Jess</p>
+    <p>Co-chair - Des</p>
 
     <h3>Career/College Preparation</h3>
     <p>

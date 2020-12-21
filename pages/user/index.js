@@ -33,10 +33,10 @@ const Payment = ({ directory }) => {
   )
 }
 
-export const getStaticPaths = async () => ({
-  paths: [],
-  fallback: true,
-})
+// export const getStaticPaths = async () => ({
+//   paths: [],
+//   fallback: true,
+// })
 
 export const getStaticProps = async () => {
   const { data } = await apollo.query({

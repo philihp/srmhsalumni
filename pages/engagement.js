@@ -28,16 +28,13 @@ const Engagement = () => (
 
     <h3>Community Service and Partnerships</h3>
     <p>
-      The Community Service &amp; Partnership Committee has the primary
-      responsibility for planning opportunities for the Alumni Association to
-      provide volunteer service to aide and support our community. The committee
-      will work to develop and sustain formal and informal partnerships with
-      organizations whose purposes align with the goals of SRMHS Alumni
-      Association. This committee will support service projects that promote
-      SRMHS and the Alumni Association within the community. The committee
-      should focus on identifying prospective partners, reaching out to engage
-      them in the initiative, and shaping the nature of the partnership. They
-      will work with the partners to define the shared goals and outcomes.
+      The Community Service &amp; Partnership Committee plans opprotunities for the 
+      organization to aid and support the community. The committee works to develop 
+      and sustain formal and informal partnerships with organizations whose purposes 
+      align with the goals of SRMHS Alumni Association. This committee supports service 
+      projects that promote SRMHS and the Alumni Association within the community. The committee
+      focuses on identifying prospective partners, reaching out and working with the 
+      partners to define the shared goals and outcomes.
     </p>
 
     <h3>Career/College Preparation</h3>

@@ -4,9 +4,7 @@ import Image from 'next/image'
 const Index = () => {
   return (
     <>
-     // CSS Class
-  <div className="text-base">
-      <Image
+    <Image
         src="/SESchoolPhoto.jpg"
         alt="Southeast Raleigh High School"
         width={1396}

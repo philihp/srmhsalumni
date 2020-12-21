@@ -1,7 +1,9 @@
 import React from 'react'
 
 const Engagement = () => (
-  <div>
+   // CSS Class
+  <div className="text-base">
+  
     <h2>Committees</h2>
     <h3>Awards, Scholarships &amp; Nominations</h3>
     <p>

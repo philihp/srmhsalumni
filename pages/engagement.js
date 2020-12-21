@@ -53,14 +53,16 @@ const Engagement = () => (
 
     <h3>Career/College Preparation</h3>
     <p>
-      The Career & College preparation committee This committee will aim to increase
-      interactions between students and alumni for career-related issues and to facilitate 
-      the relationship between the Career Services and the Alumni Association. 
-      The key tasks of the committee are to identify and define ways in which alumni can support students' 
-      exploration of career paths, share best practices from life experiences, and offer suggestions.
-      The goal is to enhance academic and career success by connecting alumni volunteers with students, faculty, 
-      administration, and peers.
-  </p>
+      The Career & College preparation committee This committee will aim to
+      increase interactions between students and alumni for career-related
+      issues and to facilitate the relationship between the Career Services and
+      the Alumni Association. The key tasks of the committee are to identify and
+      define ways in which alumni can support students&apos; exploration of
+      career paths, share best practices from life experiences, and offer
+      suggestions. The goal is to enhance academic and career success by
+      connecting alumni volunteers with students, faculty, administration, and
+      peers.
+    </p>
 
     <h3>Events, Fundraising, &amp; Programs </h3>
     <p>
@@ -83,22 +85,21 @@ const Engagement = () => (
 
     <h3>Finance &amp; Audit</h3>
     <p>
-      The Finance Committee has primary responsibility for
-      maintaining the financial assets of the Association and reviewing the
-      expenditures made by the Association. This committee assists in preparing
-      SRMHS program-by- program budgetary procedures and accepting committee
-      budget requests. 
+      The Finance Committee has primary responsibility for maintaining the
+      financial assets of the Association and reviewing the expenditures made by
+      the Association. This committee assists in preparing SRMHS program-by-
+      program budgetary procedures and accepting committee budget requests.
     </p>
 
     <h3>Membership &amp; Outreach</h3>
     <p>
       The purpose of the Membership &amp; Outreach Committee is to reach out to,
       encourage, and maintain the membership in the SRMHS Alumni Association.
-      The Membership committee works to ensure that alumni and friends feel welcomed and
-      included at local events sponsored by the Alumni Association. The
-      committee also works to grow the board applicant pool and increase the
+      The Membership committee works to ensure that alumni and friends feel
+      welcomed and included at local events sponsored by the Alumni Association.
+      The committee also works to grow the board applicant pool and increase the
       number of alumni participating in the various boards and committees that
-      comprise the Alumni Association. 
+      comprise the Alumni Association.
     </p>
 
     <h2>Class Representatives</h2>

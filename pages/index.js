@@ -4,13 +4,13 @@ import Image from 'next/image'
 const Index = () => {
   return (
     <>
-    <Image
+      <Image
         src="/SESchoolPhoto.jpg"
         alt="Southeast Raleigh High School"
         width={1396}
         height={786}
       />
-    
+
       <p>Fellow Alumni, Future Alumni, Friends, and Visitors:</p>
       <p>
         It is a pleasure to welcome you to the Southeast Raleigh Magnet High
@@ -51,7 +51,6 @@ const Index = () => {
       <p>With warmest regard,</p>
       <p>Tylisa Finley</p>
       <p>President, SRMHS Alumni Association</p>
-      
     </>
   )
 }

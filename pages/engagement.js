@@ -10,11 +10,7 @@ const Engagement = () => (
       This committee will create the applications for all required awards,
       scholarships, and positions. They will collect and review nominations and
       tally votes for the selected recipients of any SRMHS Alumni Association
-      awards, scholarships, and/or positions. The committee will be responsible
-      for reviewing current scholarship criteria, reviewing application
-      materials, interviewing candidates, gathering all votes, developing
-      ballots, and notifying nominees of outcomes. This committee will work with
-      the Events committee to plan an annual awards ceremony.
+      awards, scholarships, and/or positions.
     </p>
 
     <h3>Communications, Marketing, &amp; Digital Engagement</h3>

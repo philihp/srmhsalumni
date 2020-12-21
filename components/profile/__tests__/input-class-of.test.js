@@ -6,11 +6,11 @@ describe('InputClassOf', () => {
     subject(() => graduatingYears())
     it('creates appropriate length', () => {
       expect.assertions(1)
-      expect($subject).toHaveLength(CURRENT_YEAR - 2000)
+      expect($subject).toHaveLength(CURRENT_YEAR - 1999 + 1)
     })
-    it('first year is 2001', () => {
+    it('first year is 1999', () => {
       expect.assertions(1)
-      expect($subject[0]).toBe(2001)
+      expect($subject[0]).toBe(1999)
     })
     it('last year is current year', () => {
       expect.assertions(1)

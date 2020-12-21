@@ -1,8 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+const START_YEAR = 1999
 export const graduatingYears = () =>
-  Array.from({ length: new Date().getFullYear() - 2000 }, (_, i) => 2001 + i)
+  Array.from(
+    { length: new Date().getFullYear() - START_YEAR + 1 },
+    (_, i) => START_YEAR + i
+  )
 
 const InputClassOf = ({ children, value, onChange }) => {
   return (

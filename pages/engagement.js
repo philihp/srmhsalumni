@@ -6,7 +6,6 @@ const Engagement = () => (
   
     <h2>Committees</h2>
     <h3>Awards, Scholarships &amp; Nominations</h3>
-    <p>Chair- Tylisa</p>
     <p>
       The Awards, Scholarships, &amp; Nominations Committee will collect and
       review nominations for all designated awards, scholarships, and positions.
@@ -15,6 +14,7 @@ const Engagement = () => (
       tally votes for the selected recipients of any SRMHS Alumni Association
       awards, scholarships, and/or positions.
     </p>
+    <p>Chairperson - Tylisa</p>
 
     <h3>Communications, Marketing, &amp; Digital Engagement</h3>
 
@@ -28,6 +28,7 @@ const Engagement = () => (
       website up to date as the organization develops. The committee will work with the Class
       Representations to create ways to share the information in engaging ways.
     </p>
+    <p>Chairperson - Jess</p>
 
     <h3>Community Service and Partnerships</h3>
     <p>
@@ -51,7 +52,8 @@ const Engagement = () => (
       connecting alumni volunteers with students, faculty, administration, and
       peers.
     </p>
-
+    <p>Chairperson - Tiffany</p>   
+   
     <h3>Events, Fundraising, &amp; Programs </h3>
     <p>
       This committee oversees the creation and implementation of all events,
@@ -61,7 +63,9 @@ const Engagement = () => (
       that will engage alumni and hold events that will connect alumni with
       SRMHS.
     </p>
-
+    <p>Chairperson - Jasmyne</p>
+    <p>Co-Chair - Myshaina</p>
+   
     <h3>Finance &amp; Audit</h3>
     <p>
       The Finance Committee has primary responsibility for maintaining the
@@ -69,6 +73,7 @@ const Engagement = () => (
       the Association. This committee assists in preparing SRMHS program-by-
       program budgetary procedures and accepting committee budget requests.
     </p>
+    <p>Chairperson - Myshaina</p>
 
     <h3>Membership &amp; Outreach</h3>
     <p>
@@ -80,6 +85,7 @@ const Engagement = () => (
       number of alumni participating in the various boards and committees that
       comprise the Alumni Association.
     </p>
+    <p>Chairperson - Clarissa</p>
 
     <h2>Class Representatives</h2>
     <p>

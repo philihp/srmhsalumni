@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import { gql, useSubscription, useMutation } from '@apollo/react-hooks'
 import { withApollo } from '../lib/withApollo'
 import { useFetchUser } from '../lib/user'
@@ -148,15 +149,23 @@ const Profile = () => {
         <PublicIcon /> Class Of
       </InputClassOf>
       <InputTextarea value={profile} onChange={setProfile}>
-        <PublicIcon /> Profile (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://daringfireball.net/projects/markdown/syntax"
-        >
-          markdown supported
-        </a>
-        )
+        <PublicIcon /> Profile
+        <div className="text-sm">
+          Which college did you attend? Where do you work now? Where do you
+          live? Your profile here will appear{' '}
+          <Link href={`/user/${enrollment?.id}`}>
+            <a>here</a>
+          </Link>
+          Special formatting{' '}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://daringfireball.net/projects/markdown/syntax"
+          >
+            markdown
+          </a>{' '}
+          can be used for formatting.
+        </div>
       </InputTextarea>
       {updateError && <Warning>{JSON.stringify(updateError?.message)}</Warning>}
       <button

@@ -1,11 +1,6 @@
 import { gql } from '@apollo/react-hooks'
 import stripe from '../../../lib/stripe'
-import apollo from '../../../lib/apollo/apolloClient'
-
-const client = apollo(undefined, {
-  'content-type': 'application/json',
-  'x-hasura-admin-secret': process.env.HASURA_GRAPHQL_ADMIN_SECRET,
-})
+import client from '../../../lib/apollo/client'
 
 const UPDATE_ENROLLMENT = gql`
   mutation($memberType: String!, $email: String!) {

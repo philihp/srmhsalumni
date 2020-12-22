@@ -18,7 +18,7 @@ const DirectoryUser = ({ user: { id, classOf, givenName, surname } }) => (
 DirectoryUser.propTypes = {
   user: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    classOf: PropTypes.string,
+    classOf: PropTypes.number,
     givenName: PropTypes.string,
     surname: PropTypes.string,
   }).isRequired,

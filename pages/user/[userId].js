@@ -1,12 +1,10 @@
 import React from 'react'
-import { useRouter } from 'next/router'
-import { gql, useSubscription } from '@apollo/react-hooks'
+import { gql } from '@apollo/react-hooks'
 import ReactMarkdown from 'react-markdown'
-import { withApollo } from '../../lib/withApollo'
-import Warning from '../../components/warning'
+import apollo from '../../lib/apollo/client'
 
 const GET_PROFILE = gql`
-  subscription($userId: uuid!) {
+  query($userId: uuid!) {
     public_enrollments(where: { id: { _eq: $userId } }) {
       givenName: given_name
       surname
@@ -15,23 +13,35 @@ const GET_PROFILE = gql`
   }
 `
 
-const Payment = () => {
-  const router = useRouter()
-  const { userId } = router.query
-  const { data, loading, error } = useSubscription(GET_PROFILE, {
-    variables: { userId },
-  })
-  const { profile, surname, givenName } = data?.public_enrollments?.[0] || {}
+const Profile = ({ enrollment }) => {
+  const { profile, surname, givenName } = enrollment || {}
 
   return (
     <div>
       <h1>
         {givenName} {surname}
       </h1>
-      {!loading && error && <Warning>{JSON.stringify(error?.message)}</Warning>}
       <ReactMarkdown>{profile}</ReactMarkdown>
     </div>
   )
 }
 
-export default withApollo()(Payment)
+export const getStaticPaths = async () => ({
+  paths: [{ params: { userId: '99ce7766-2a6a-42e2-8fe3-a0df97f6e232' } }],
+  fallback: true,
+})
+
+export const getStaticProps = async ({ params: { userId } }) => {
+  console.log('generating', userId)
+  const { data } = await apollo.query({
+    query: GET_PROFILE,
+    variables: { userId },
+  })
+
+  return {
+    props: { enrollment: data?.public_enrollments?.[0] || {} },
+    revalidate: 1,
+  }
+}
+
+export default Profile

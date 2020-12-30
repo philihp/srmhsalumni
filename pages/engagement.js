@@ -34,6 +34,8 @@ const Engagement = () => (
     
 
     <h3>Community Service and Partnerships</h3>
+    <p>Chair - Des Woods</p>
+    <p>Co-chair - Jess Moore Matthews</p>
     <p>
       The Community Service &amp; Partnership Committee plans opprotunities for the 
       organization to aid and support the community. The committee works to develop 
@@ -43,10 +45,11 @@ const Engagement = () => (
       focuses on identifying prospective partners, reaching out and working with the 
       partners to define the shared goals and outcomes.
     </p>
-    <p>Chairperson - Des Woods</p>
-    <p>Co-chair - Jess Moore Matthews</p>
+    
 
     <h3>Career/College Preparation</h3>
+    <p>Chair- Tiffany Tate</p>  
+    <p> Co-chair - Open</p>
     <p>
       This committee will aim to increase interactions between students and alumni for career-related
       issues and to facilitate the relationship between the Career Services and
@@ -57,7 +60,7 @@ const Engagement = () => (
       connecting alumni volunteers with students, faculty, administration, and
       peers.
     </p>
-    <p>Chairperson - Tiffany Tate</p>   
+    
    
     <h3>Events, Fundraising, &amp; Programs </h3>
     <p>

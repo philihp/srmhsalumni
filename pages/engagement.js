@@ -63,6 +63,8 @@ const Engagement = () => (
     
    
     <h3>Events, Fundraising, &amp; Programs </h3>
+    <p>Chair - Jasmyne Ormond</p>
+    <p>Co-Chair - Myshaina Kehinde</p>
     <p>
       This committee oversees the creation and implementation of all events,
       fundraisers, and programs to advance our mission, transition students to
@@ -71,19 +73,22 @@ const Engagement = () => (
       that will engage alumni and hold events that will connect alumni with
       SRMHS.
     </p>
-    <p>Chairperson - Jasmyne Ormond</p>
-    <p>Co-Chair - Myshaina Kehinde</p>
+    
    
     <h3>Finance &amp; Audit</h3>
+    <p>Chairperson - Myshaina Kehinde</p>
+    <p>Co- Chair - Open</p>
     <p>
       The Finance Committee has primary responsibility for maintaining the
       financial assets of the Association and reviewing the expenditures made by
       the Association. This committee assists in preparing SRMHS program-by-
       program budgetary procedures and accepting committee budget requests.
     </p>
-    <p>Chairperson - Myshaina Kehinde</p>
+    
 
     <h3>Membership &amp; Outreach</h3>
+    <p>Chair - Clarissa Jones</p>
+    <p>Co- Chair - Open</p>
     <p>
       The purpose of the Membership &amp; Outreach Committee is to reach out to,
       encourage, and maintain the membership in the SRMHS Alumni Association.
@@ -93,7 +98,7 @@ const Engagement = () => (
       number of alumni participating in the various boards and committees that
       comprise the Alumni Association.
     </p>
-    <p>Chairperson - Clarissa Jones</p>
+    
 
     <h2>Class Representatives</h2>
     <p>

@@ -6,6 +6,8 @@ const Engagement = () => (
   
     <h2>Committees</h2>
     <h3>Awards, Scholarships &amp; Nominations</h3>
+    <p>Chair - Tylisa Finley</p>
+    <p>Co-chair - open</p>  
     <p>
       The Awards, Scholarships, &amp; Nominations Committee will collect and
       review nominations for all designated awards, scholarships, and positions.
@@ -14,7 +16,7 @@ const Engagement = () => (
       tally votes for the selected recipients of any SRMHS Alumni Association
       awards, scholarships, and/or positions.
     </p>
-    <p>Chairperson - Tylisa Finley</p>
+   
 
     <h3>Communications, Marketing, &amp; Digital Engagement</h3>
 

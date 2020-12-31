@@ -5,6 +5,10 @@ const About = () => (
   // CSS Class
   <div className="text-base">
     <h2>Mission</h2>
+     <p>
+      To champion a lifelong relationship between Southeast Raleigh Magnet High
+      School and alumni.
+    </p>
     <p>
       The Southeast Raleigh Magnet High School Alumni Association is a
       non-profit organization. Its purpose is to foster, maintain and support a
@@ -15,10 +19,7 @@ const About = () => (
       alumni to the School. Service on the Board of Directors is open to any
       interested alumnus.
     </p>
-    <p>
-      To champion a lifelong relationship between Southeast Raleigh Magnet High
-      School and alumni.
-    </p>
+ 
 
     <h2>Board</h2>
     <div className="flex flex-wrap">

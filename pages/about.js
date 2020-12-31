@@ -19,7 +19,15 @@ const About = () => (
       alumni to the School. Service on the Board of Directors is open to any
       interested alumnus.
     </p>
- 
+ <h2>Vision</h2>
+    <p>
+      The Southeast Raleigh Magnet High School Alumni Association is a
+      remarkable non-profit organization that is recognized as a significant
+      resource to the SRMHS Community. A dedicated committee and board of
+      directors will lead a sustainable organization, abide by our mission
+      statement, foster campus traditions, and provide a dynamic legacy for
+      current and future Alumni of SRMHS
+    </p>
 
     <h2>Board</h2>
     <div className="flex flex-wrap">

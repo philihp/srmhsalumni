@@ -9,7 +9,7 @@ const ContactUs = () => (
   Follow us on social media: 
   </p>
   <p>
-<a href="www.twitter.com/srmhsalumni">www.twitter.com/srmhsalumni</a>
+<a href="https://mobile.twitter.com/srmhsalumni">www.twitter.com/srmhsalumni</a>
   </p>
   <p>
 <a href="https://instagram.com/srmhsalumni?igshid=1r6brghlonbl">www.instagram.com/srmhsalumni</a> 

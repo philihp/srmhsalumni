@@ -176,6 +176,8 @@ const Membership = () => {
           </div>
         </form>
       )}
+       
+  <div className="text-base">
       <h2>Frequently Asked Questions</h2>
       <p>
         <b>1. How do I join the Alumni Association?</b>

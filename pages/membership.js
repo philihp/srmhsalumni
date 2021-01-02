@@ -175,8 +175,7 @@ const Membership = () => {
             />
           </div>
         </form>
-      )}
-       
+      )}       
   <div className="text-base">
       <h2>Frequently Asked Questions</h2>
       <p>

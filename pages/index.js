@@ -10,7 +10,7 @@ const Index = () => {
         width={1396}
         height={786}
       />
- // CSS Class
+
   <div className="text-base">
       <p>Fellow Alumni, Future Alumni, Friends, and Visitors:</p>
       <p>

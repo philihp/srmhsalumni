@@ -156,6 +156,7 @@ const Profile = () => {
           <Link href={`/user/${enrollment?.id}`}>
             <a>here</a>
           </Link>
+          <p>
           Special formatting{' '}
           <a
             target="_blank"
@@ -165,6 +166,7 @@ const Profile = () => {
             markdown
           </a>{' '}
           can be used for formatting.
+          </p>
         </div>
       </InputTextarea>
       {updateError && <Warning>{JSON.stringify(updateError?.message)}</Warning>}

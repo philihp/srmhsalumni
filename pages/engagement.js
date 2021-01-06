@@ -20,7 +20,7 @@ const Engagement = () => (
 
     <h3>Communications, Marketing, &amp; Digital Engagement</h3>
     <p>Chair - Jess Moore Matthews</p>
-    <p>Co-chair - Des Woods</p>
+    <p>Co-chair - Open</p>
     <p>
       The Communications, Marketing, &amp; Digital Engagement committee connects alum
       to current events and informaiton related to the SRMHS Alumni Assoication. 
@@ -34,7 +34,7 @@ const Engagement = () => (
     
 
     <h3>Community Service and Partnerships</h3>
-    <p>Chair - Des Woods</p>
+    <p>Chair - Open</p>
     <p>Co-chair - Jess Moore Matthews</p>
     <p>
       The Community Service &amp; Partnership Committee plans opprotunities for the 

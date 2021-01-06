@@ -282,6 +282,13 @@ const Membership = () => {
         srmhsalumni@gmail.com for assistance. Please note there will not be any
         refunds provided for cancelled memberships.
       </p>
+      <p>
+       <b>11. Why do you need my t-shirt size?</b>
+       </p>
+       <p>
+        The association is requesting t-shirt sizes for any alumni swag we would like to provide to 
+        our members in the future. 
+        </p>
     </div>
   )
 }

@@ -37,7 +37,7 @@ const About = () => (
         name="Tiffany Tate"
         src="/Tiffany.jpg"
       />
-      <StaffCard title="Secretary" name="Des Woods" src="/Des.png" />
+     
       <StaffCard
         title="Treasurer"
         name="Myshaina Kehinde"

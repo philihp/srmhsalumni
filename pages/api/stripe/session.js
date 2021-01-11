@@ -3,11 +3,13 @@ import stripe from '../../../lib/stripe'
 const PRICES = {
   annual: process.env.STRIPE_ANNUAL_PRICE_ID,
   lifetime: process.env.STRIPE_LIFETIME_PRICE_ID,
+  provisional: process.env.STRIPE_PROVISIONAL_PRICE_ID,
 }
+const prices = (type) => PRICES[type]
 
-const MODES = {
-  annual: 'subscription',
-  lifetime: 'payment',
+const modes = (type) => {
+  if (type === 'annual') return 'subscription'
+  return 'payment'
 }
 
 export default async function session(req, res) {
@@ -20,8 +22,8 @@ export default async function session(req, res) {
     const ses = await stripe.checkout.sessions.create({
       customer_email: customerEmail,
       payment_method_types: ['card'],
-      line_items: [{ price: PRICES[membershipLevel], quantity }],
-      mode: MODES[membershipLevel],
+      line_items: [{ price: prices(membershipLevel), quantity }],
+      mode: modes(membershipLevel),
       success_url: `${req.headers.origin}/api/stripe/success?sessionId={CHECKOUT_SESSION_ID}`,
       cancel_url: `${req.headers.origin}/membership`,
     })

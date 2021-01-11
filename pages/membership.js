@@ -249,7 +249,8 @@ const Membership = () => {
         <b>6. Is there an annual fee for membership?</b>
       </p>
       <p>Yes, the annual fee is $100. It will be drafted automatically each year.  If you would 
-        like to change your payment information, please email srmhsalumni@gmai.com 
+        like to change your payment information, please email srmhsalumni@gmai.com. The Lifetime 
+        membership does not have an annual fee.  
       </p>
       <p>
         <b>7. Married couple discounts?</b>

@@ -1,0 +1,5 @@
+- args:
+    cascade: false
+    read_only: false
+    sql: ALTER TABLE "public"."payment" DROP COLUMN "stripe_payment_intent" CASCADE;
+  type: run_sql

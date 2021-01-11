@@ -1,1 +1,2 @@
 endpoint: https://srmhs-alumni.hasura.app
+admin_secret: hunter2

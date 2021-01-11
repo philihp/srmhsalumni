@@ -20,11 +20,65 @@ const figureMemberType = (status, subtotal) => {
 }
 
 const setMemberType = async (email, status, subtotal) => {
-  const result = await client.mutate({
+  await client.mutate({
     mutation: UPDATE_ENROLLMENT,
     variables: { email, memberType: figureMemberType(status, subtotal) },
   })
-  return result
+}
+
+const GET_USER = gql`
+  query($email: String!) {
+    users(where: { email: { _eq: $email } }) {
+      id
+    }
+  }
+`
+
+const ADD_PAYMENT = gql`
+  mutation(
+    $userId: String!
+    $stripeId: String!
+    $stripeCustomer: String!
+    $stripeCustomerEmail: String!
+    $amountTotal: Int!
+  ) {
+    insert_payment_one(
+      object: {
+        user_id: $userId
+        amount_total: $amountTotal
+        stripe_customer: $stripeCustomer
+        stripe_customer_email: $stripeCustomerEmail
+        stripe_id: $stripeId
+      }
+    ) {
+      id
+    }
+  }
+`
+
+const addPayment = async (checkoutSession) => {
+  const {
+    id: stripeId,
+    customer: stripeCustomer,
+    customer_email: stripeCustomerEmail,
+    amount_total: amountTotal,
+  } = checkoutSession
+  const result = await client.query({
+    query: GET_USER,
+    variables: { email: stripeCustomerEmail },
+  })
+  const userId = result.data.users[0].id
+  const variables = {
+    userId,
+    stripeId,
+    stripeCustomer,
+    stripeCustomerEmail,
+    amountTotal,
+  }
+  await client.mutate({
+    mutation: ADD_PAYMENT,
+    variables,
+  })
 }
 
 export default async function success(req, res) {
@@ -44,5 +98,6 @@ export default async function success(req, res) {
     customer_email: customerEmail,
   } = checkoutSession
   await setMemberType(customerEmail, paymentStatus, amountSubtotal)
+  await addPayment(checkoutSession)
   return res.redirect(307, '/profile')
 }

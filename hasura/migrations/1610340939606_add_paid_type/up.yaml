@@ -1,0 +1,9 @@
+- args:
+    cascade: false
+    read_only: false
+    sql: "CREATE OR REPLACE VIEW \"public\".\"public_enrollments\" AS \n SELECT enrollments.id,\n
+      \   enrollments.member_type,\n    enrollments.class_of,\n    enrollments.given_name,\n
+      \   enrollments.surname,\n    enrollments.profile\n   FROM enrollments\n  WHERE
+      ((enrollments.member_type)::text = ANY (ARRAY[('paid'::character varying)::text,
+      ('annual_paid'::character varying)::text, ('lifetime_paid'::character varying)::text]));"
+  type: run_sql

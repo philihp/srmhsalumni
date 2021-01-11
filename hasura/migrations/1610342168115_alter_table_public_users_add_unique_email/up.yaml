@@ -1,0 +1,5 @@
+- args:
+    cascade: false
+    read_only: false
+    sql: alter table "public"."users" add constraint "users_email_key" unique ("email");
+  type: run_sql

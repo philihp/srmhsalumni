@@ -154,14 +154,27 @@ const Membership = () => {
               />
               <span className="ml-2">Lifetime</span>
             </label>
+            <label className="inline-flex items-center ml-6">
+              <input
+                type="radio"
+                className="form-radio shadow"
+                name="membershipLevel"
+                value="provisional"
+                checked={membershipLevel === 'provisional'}
+                onChange={() => setMembershipLevel('provisional')}
+              />
+              <span className="ml-2">Provisional</span>
+            </label>
           </div>
 
           <h3>Membership Fee</h3>
 
           <p>
             I understand that the fee for membership fee for alumni, friends,
-            faculty &amp; staff is $100.00 annually and the lifetime membership
-            is a one-time membership fee of $1000.00.
+            faculty &amp; staff is $100 annually and the lifetime membership is
+            a one-time membership fee of $1000. Provisional memberships are two
+            payments of $50, the second payment must be made before the end of
+            the first month.
           </p>
           <p>
             To activate your membership, the membership fee is due with the
@@ -248,9 +261,11 @@ const Membership = () => {
       <p>
         <b>6. Is there an annual fee for membership?</b>
       </p>
-      <p>Yes, the annual fee is $100. It will be drafted automatically each year.  If you would 
-        like to change your payment information, please email srmhsalumni@gmail.com. The Lifetime 
-        membership does not have an annual fee.  
+      <p>
+        Yes, the annual fee is $100. It will be drafted automatically each year.
+        If you would like to change your payment information, please email
+        srmhsalumni@gmail.com. The Lifetime membership does not have an annual
+        fee.
       </p>
       <p>
         <b>7. Married couple discounts?</b>
@@ -286,12 +301,12 @@ const Membership = () => {
         refunds provided for cancelled memberships.
       </p>
       <p>
-       <b>11. Why do you need my t-shirt size?</b>
-       </p>
-       <p>
-        The association is requesting t-shirt sizes for any alumni swag we would like to provide to 
-        our members in the future. 
-        </p>
+        <b>11. Why do you need my t-shirt size?</b>
+      </p>
+      <p>
+        The association is requesting t-shirt sizes for any alumni swag we would
+        like to provide to our members in the future.
+      </p>
     </div>
   )
 }

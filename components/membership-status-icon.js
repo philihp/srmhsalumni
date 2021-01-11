@@ -3,19 +3,13 @@ import PropTypes from 'prop-types'
 
 const inner = (memberType) => {
   switch (memberType) {
-    case 'annual_paid':
-      return (
-        <>
-          Annual{' '}
-          <span role="img" aria-label="Paid">
-            ✅
-          </span>
-        </>
-      )
+    case 'paid':
     case 'lifetime_paid':
+    case 'annual_paid':
+    case 'provisionalpaid':
       return (
         <>
-          Lifetime{' '}
+          Paid{' '}
           <span role="img" aria-label="Paid">
             ✅
           </span>

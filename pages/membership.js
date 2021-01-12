@@ -297,8 +297,8 @@ const Membership = () => {
       </p>
       <p>
         If you ever want to cancel your membership for any reason, please email
-        srmhsalumni@gmail.com for assistance. Please note there will not be any
-        refunds provided for cancelled memberships.
+        srmhsalumni@gmail.com for assistance. <b>Please note: there will NOT be any
+        refunds provided for cancelled memberships</b>.
       </p>
       <p>
         <b>11. Why do you need my t-shirt size?</b>

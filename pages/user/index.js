@@ -33,20 +33,16 @@ const Payment = ({ directory }) => {
   )
 }
 
-// export const getStaticPaths = async () => ({
-//   paths: [],
-//   fallback: true,
-// })
-
-export const getStaticProps = async () => {
-  const { data } = await apollo.query({
+const getDirectory = async () => {
+  const result = await apollo.query({
     query: GET_ENROLLMENT_LIST,
   })
-
-  return {
-    props: { directory: data?.public_enrollments || [] },
-    revalidate: 1,
-  }
+  return result?.data?.public_enrollments || []
 }
+
+export const getStaticProps = async () => ({
+  props: { directory: await getDirectory() },
+  revalidate: 1,
+})
 
 export default Payment

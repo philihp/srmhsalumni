@@ -30,7 +30,7 @@ module.exports = (phase) => {
       SESSION_COOKIE_SECRET: process.env.SESSION_COOKIE_SECRET,
       HASURA_GRAPHQL_PATH: process.env.HASURA_GRAPHQL_PATH,
       HASURA_GRAPHQL_ADMIN_SECRET,
-      SESSION_COOKIE_LIFETIME: 7200, // 2 hours
+      SESSION_COOKIE_LIFETIME: 60 * 60 * 8 /* 8 hours */,
       APP_HOST: process.env.DOMAIN,
       STRIPE_PUBLIC: process.env.STRIPE_PUBLIC,
     },

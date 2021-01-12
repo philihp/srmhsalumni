@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import HeaderLink from './header-link'
 
 const Index = () => {
@@ -7,7 +8,11 @@ const Index = () => {
     <>
       <div className="flex items-center justify-between py-2 border-b">
         <div className="px-4">
-          <Image src="/logo.png" height="75" width="97" />
+          <Link href="/">
+            <a>
+              <Image src="/logo.png" height="75" width="97" />
+            </a>
+          </Link>
         </div>
         <ul className="inline-flex items-center">
           <HeaderLink href="/about">About</HeaderLink>

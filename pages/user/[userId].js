@@ -27,21 +27,21 @@ const Profile = ({ enrollment }) => {
 }
 
 export const getStaticPaths = async () => ({
-  paths: [{ params: { userId: '99ce7766-2a6a-42e2-8fe3-a0df97f6e232' } }],
+  paths: [],
   fallback: true,
 })
 
-export const getStaticProps = async ({ params: { userId } }) => {
-  console.log('generating', userId)
-  const { data } = await apollo.query({
+const getEnrollment = async (userId) => {
+  const result = await apollo.query({
     query: GET_PROFILE,
     variables: { userId },
   })
-
-  return {
-    props: { enrollment: data?.public_enrollments?.[0] || {} },
-    revalidate: 1,
-  }
+  return result?.data?.public_enrollments?.[0] || {}
 }
+
+export const getStaticProps = async ({ params: { userId } }) => ({
+  props: { enrollment: await getEnrollment(userId) },
+  revalidate: 1,
+})
 
 export default Profile

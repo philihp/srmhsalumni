@@ -307,6 +307,16 @@ const Membership = () => {
         The association is requesting t-shirt sizes for any alumni swag we would
         like to provide to our members in the future.
       </p>
+      <p>
+        <b>12. As a lifetime member, will I still be able to attend the free signature 
+        event included in my lifetime membership package, if there are no in-person events 
+        for the 2021 membership year?</b>
+       </p>
+       <p>
+        Yes, as soon as we can have in person events, members who have signed up for the lifetime 
+        membership will still receive their one free event.  We will notify Lifetime members when 
+        this is available.
+       </p> 
     </div>
   )
 }

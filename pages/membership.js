@@ -255,7 +255,7 @@ const Membership = () => {
       </p>
       <p>
         As an active member you will also have the right to vote at all
-        meetings, and shall be eligible for appointment to committees and to
+        meetings and shall be eligible for appointment to committees and to
         hold office in accordance with the by-laws of the association.
       </p>
       <p>
@@ -273,12 +273,12 @@ const Membership = () => {
       <p>No, we do not have a discount for married couples</p>
       <p>
         <b>
-          8. What is the different between a lifetime member vs. regular
+          8. What is the different between a Lifetime member vs. Annual
           membership?
         </b>
       </p>
       <p>
-        A regular membership has an annual cost of $100. The lifetime membership
+        A Annual membership has an annual cost of $100. The Lifetime membership
         has a one-time fee of $1000. A lifetime membership also provides a
         discounted cost to Alumni events.
       </p>

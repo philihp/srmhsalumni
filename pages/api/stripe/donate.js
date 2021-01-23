@@ -1,8 +1,11 @@
 import stripe from '../../../lib/stripe'
+import configly from '../../../lib/configly'
 
 export default async function donate(req, res) {
   if (req.method === 'POST') {
     const { customer_email: customerEmail, amount } = req.body
+    const product = await configly.get('donate_product')
+
     const ses = await stripe.checkout.sessions.create({
       customer_email: customerEmail,
       payment_method_types: ['card'],
@@ -11,7 +14,7 @@ export default async function donate(req, res) {
           price_data: {
             unit_amount: amount,
             currency: 'usd',
-            product: process.env.STRIPE_DONATION_PRICE_ID,
+            product,
           },
           quantity: 1,
         },

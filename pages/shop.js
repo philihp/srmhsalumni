@@ -7,8 +7,8 @@ return (
    <Image
        scr=”/Hoodie Image.jpg”
        atl=”Hoodie”
-       width={1000}
-       height=(300}
+       width={1396}
+       height=(786}
     />	
 	
   <div>

@@ -1,9 +1,16 @@
 import React from 'react'
-import StaffCard from '../components/staff-card'
+import Image from ‘next/image’
 
-
-const Shop = () => (
-  
+const Shop = () => {
+return (
+  <>
+   <Image
+       scr=”/Hoodie Image.jpg”
+       atl=”Hoodie”
+       width={1000}
+       height=(300}
+    />	
+	
   <div>
    <p>
 	Need some SRMHS Alumni gear? Well click the link below and have a t-shirt or hoodie sent directly to you! 
@@ -19,13 +26,6 @@ const Shop = () => (
         </button>
       </Link>
     </p>
-  
-<div className="flex flex-wrap">
-      <StaffCard name="Hoodie" src="/Hoodie Image.jpg" />
-      
-<div className="flex flex-wrap">
-      <StaffCard name="T-Shirt" src="/T-shirt image.jpg" />
-  
   
   </div>
 )

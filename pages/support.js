@@ -4,9 +4,10 @@ import Link from 'next/link'
 const Support = () => (
   <div>
     <p>
-    If you would like to donate to the SRMHS Alumni Association, please click the link below.  
-    Be sure to enter in your email address in case we need to contact you for any reason. 
-    </p>  
+      If you would like to donate to the SRMHS Alumni Association, please click
+      the link below. Be sure to enter in your email address in case we need to
+      contact you for any reason.
+    </p>
     <p>
       <Link href="/donate">
         <button

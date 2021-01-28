@@ -254,9 +254,9 @@ const Membership = () => {
         membership and then a 50% off the cost of future events.
       </p>
       <p>
-        As an active member you will also have the right to vote at all
-        meetings and shall be eligible for appointment to committees and to
-        hold office in accordance with the by-laws of the association.
+        As an active member you will also have the right to vote at all meetings
+        and shall be eligible for appointment to committees and to hold office
+        in accordance with the by-laws of the association.
       </p>
       <p>
         <b>6. Is there an annual fee for membership?</b>
@@ -297,8 +297,12 @@ const Membership = () => {
       </p>
       <p>
         If you ever want to cancel your membership for any reason, please email
-        srmhsalumni@gmail.com for assistance. <b>Please note: there will NOT be any
-        refunds provided for cancelled memberships</b>.
+        srmhsalumni@gmail.com for assistance.{' '}
+        <b>
+          Please note: there will NOT be any refunds provided for cancelled
+          memberships
+        </b>
+        .
       </p>
       <p>
         <b>11. Why do you need my t-shirt size?</b>
@@ -308,23 +312,30 @@ const Membership = () => {
         like to provide to our members in the future.
       </p>
       <p>
-        <b>12. As a lifetime member, will I still be able to attend the free signature 
-        event included in my lifetime membership package, if there are no in-person events 
-        for the 2021 membership year?</b>
-       </p>
-       <p>
-        Yes, as soon as we can have in person events, members who have signed up for the lifetime 
-        membership will still receive their one free event.  We will notify Lifetime members when 
-        this is available.
-       </p>
-       <p>
-       <b>13. I signed up to be an annual member this year, can I change to be a lifetime member next year?</b>
-       </p>
-       <p>
-       Currently the lifetime membership is only being offered during the 2021 membership period. 
-       If you were to sign up for an annual membership this year, it would be the same next year. 
-       If the memberships for 2022 should change, we will make an announcement to all alumni, faculty, staff, and friends.
-       </p>
+        <b>
+          12. As a lifetime member, will I still be able to attend the free
+          signature event included in my lifetime membership package, if there
+          are no in-person events for the 2021 membership year?
+        </b>
+      </p>
+      <p>
+        Yes, as soon as we can have in person events, members who have signed up
+        for the lifetime membership will still receive their one free event. We
+        will notify Lifetime members when this is available.
+      </p>
+      <p>
+        <b>
+          13. I signed up to be an annual member this year, can I change to be a
+          lifetime member next year?
+        </b>
+      </p>
+      <p>
+        Currently the lifetime membership is only being offered during the 2021
+        membership period. If you were to sign up for an annual membership this
+        year, it would be the same next year. If the memberships for 2022 should
+        change, we will make an announcement to all alumni, faculty, staff, and
+        friends.
+      </p>
     </div>
   )
 }

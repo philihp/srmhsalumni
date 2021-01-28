@@ -157,15 +157,15 @@ const Profile = () => {
             <a>here</a>
           </Link>
           <p>
-          Special formatting{' '}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://daringfireball.net/projects/markdown/syntax"
-          >
-            markdown
-          </a>{' '}
-          can be used for formatting.
+            Special formatting{' '}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://daringfireball.net/projects/markdown/syntax"
+            >
+              markdown
+            </a>{' '}
+            can be used for formatting.
           </p>
         </div>
       </InputTextarea>

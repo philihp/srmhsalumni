@@ -44,10 +44,10 @@
     "tailwindcss": "2.0.2"
   },
   "devDependencies": {
-    "@babel/cli": "7.12.10",
-    "@babel/core": "7.12.10",
-    "@babel/preset-env": "7.12.11",
-    "@babel/preset-react": "7.12.10",
+    "@babel/cli": "7.12.13",
+    "@babel/core": "7.12.13",
+    "@babel/preset-env": "7.12.13",
+    "@babel/preset-react": "7.12.13",
     "@fullhuman/postcss-purgecss": "4.0.0",
     "@philihp/eslint-config": "4.2.0",
     "@zeit/next-css": "1.0.1",

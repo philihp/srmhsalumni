@@ -5,7 +5,7 @@ const About = () => (
   // CSS Class
   <div className="text-base">
     <h2>Mission</h2>
-     <p>
+    <p>
       To champion a lifelong relationship between Southeast Raleigh Magnet High
       School and alumni.
     </p>
@@ -19,7 +19,7 @@ const About = () => (
       alumni to the School. Service on the Board of Directors is open to any
       interested alumnus.
     </p>
- <h2>Vision</h2>
+    <h2>Vision</h2>
     <p>
       The Southeast Raleigh Magnet High School Alumni Association is a
       remarkable non-profit organization that is recognized as a significant
@@ -37,7 +37,7 @@ const About = () => (
         name="Tiffany Tate"
         src="/Tiffany.jpg"
       />
-     
+
       <StaffCard
         title="Treasurer"
         name="Myshaina Kehinde"
@@ -59,7 +59,7 @@ const About = () => (
         src="/Jasmyne.jpg"
       />
     </div>
-   
+
     {/* <h2>Awards</h2>
     <p>Place holder page</p>
     <h2>Annual Report</h2>

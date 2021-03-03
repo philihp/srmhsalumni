@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import cx from 'classnames'
+import { useUser } from '@auth0/nextjs-auth0'
 import { loadStripe } from '@stripe/stripe-js'
 import { withApollo } from '../lib/withApollo'
-import { useFetchUser } from '../lib/user'
 
 const stripePromise = loadStripe(process.env.STRIPE_PUBLIC)
 
@@ -30,7 +30,7 @@ const LoadingUser = () => (
 )
 
 const Donate = () => {
-  const { user, loading: userLoading } = useFetchUser({ required: false })
+  const { user, loading: userLoading } = useUser({ required: false })
   const [email, setEmail] = useState('')
   const [emailBordered, setEmailBordered] = useState(false)
   const [amount, setAmount] = useState('50.00')

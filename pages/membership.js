@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { gql, useMutation, useQuery } from '@apollo/react-hooks'
 import { loadStripe } from '@stripe/stripe-js'
+import { useUser } from '@auth0/nextjs-auth0'
 import { withApollo } from '../lib/withApollo'
-import { useFetchUser } from '../lib/user'
 import Warning from '../components/warning'
 
 const stripePromise = loadStripe(process.env.STRIPE_PUBLIC)
@@ -65,7 +65,7 @@ const LoadingEnrollment = () => (
 )
 
 const Membership = () => {
-  const { user, loading: userLoading } = useFetchUser({ required: true })
+  const { user, loading: userLoading } = useUser({ required: true })
   const { data, loading: enrollmentLoading } = useQuery(GET_USER, {
     variables: { userId: user?.sub },
   })

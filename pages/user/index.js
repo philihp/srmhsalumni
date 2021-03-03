@@ -25,7 +25,7 @@ const Payment = ({ directory }) => {
         </thead>
         <tbody>
           {directory.map((user) => (
-            <DirectoryUser user={user} />
+            <DirectoryUser key={user} user={user} />
           ))}
         </tbody>
       </table>

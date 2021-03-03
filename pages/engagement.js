@@ -1,13 +1,12 @@
 import React from 'react'
 
 const Engagement = () => (
-   // CSS Class
+  // CSS Class
   <div className="text-base">
-  
     <h2>Committees</h2>
     <h3>Awards, Scholarships &amp; Nominations</h3>
     <p>Chair - Tylisa Finley</p>
-    <p>Co-chair - Open</p>  
+    <p>Co-chair - Open</p>
     <p>
       The Awards, Scholarships, &amp; Nominations Committee will collect and
       review nominations for all designated awards, scholarships, and positions.
@@ -16,52 +15,51 @@ const Engagement = () => (
       tally votes for the selected recipients of any SRMHS Alumni Association
       awards, scholarships, and/or positions.
     </p>
-   
 
     <h3>Communications, Marketing, &amp; Digital Engagement</h3>
     <p>Chair - Jess Moore Matthews</p>
     <p>Co-chair - Open</p>
     <p>
-      The Communications, Marketing, &amp; Digital Engagement committee connects alum
-      to current events and informaiton related to the SRMHS Alumni Assoication. 
-      This committee maintains a positive image for SRMHS Alumni Association and utilize all
-      platefoms to keep in touch with alumni, students, staff, and the community.
-      This committee is responsible for keeping everyone engaged through an effective and 
-      efficient communication system by creating a media strategy and keeping the SRMHS Alumni 
-      website up to date as the organization develops. The committee will work with the Class
-      Representations to create ways to share the information in engaging ways.
+      The Communications, Marketing, &amp; Digital Engagement committee connects
+      alum to current events and informaiton related to the SRMHS Alumni
+      Assoication. This committee maintains a positive image for SRMHS Alumni
+      Association and utilize all platefoms to keep in touch with alumni,
+      students, staff, and the community. This committee is responsible for
+      keeping everyone engaged through an effective and efficient communication
+      system by creating a media strategy and keeping the SRMHS Alumni website
+      up to date as the organization develops. The committee will work with the
+      Class Representations to create ways to share the information in engaging
+      ways.
     </p>
-    
 
     <h3>Community Service and Partnerships</h3>
     <p>Chair - Open</p>
     <p>Co-chair - Jess Moore Matthews</p>
     <p>
-      The Community Service &amp; Partnership Committee plans opprotunities for the 
-      organization to aid and support the community. The committee works to develop 
-      and sustain formal and informal partnerships with organizations whose purposes 
-      align with the goals of SRMHS Alumni Association. This committee supports service 
-      projects that promote SRMHS and the Alumni Association within the community. The committee
-      focuses on identifying prospective partners, reaching out and working with the 
-      partners to define the shared goals and outcomes.
+      The Community Service &amp; Partnership Committee plans opprotunities for
+      the organization to aid and support the community. The committee works to
+      develop and sustain formal and informal partnerships with organizations
+      whose purposes align with the goals of SRMHS Alumni Association. This
+      committee supports service projects that promote SRMHS and the Alumni
+      Association within the community. The committee focuses on identifying
+      prospective partners, reaching out and working with the partners to define
+      the shared goals and outcomes.
     </p>
-    
 
     <h3>Career/College Preparation</h3>
-    <p>Chair- Tiffany Tate</p>  
+    <p>Chair- Tiffany Tate</p>
     <p> Co-chair - Open</p>
     <p>
-      This committee will aim to increase interactions between students and alumni for career-related
-      issues and to facilitate the relationship between the Career Services and
-      the Alumni Association. The key tasks of the committee are to identify and
-      define ways in which alumni can support students&apos; exploration of
-      career paths, share best practices from life experiences, and offer
-      suggestions. The goal is to enhance academic and career success by
-      connecting alumni volunteers with students, faculty, administration, and
-      peers.
+      This committee will aim to increase interactions between students and
+      alumni for career-related issues and to facilitate the relationship
+      between the Career Services and the Alumni Association. The key tasks of
+      the committee are to identify and define ways in which alumni can support
+      students&apos; exploration of career paths, share best practices from life
+      experiences, and offer suggestions. The goal is to enhance academic and
+      career success by connecting alumni volunteers with students, faculty,
+      administration, and peers.
     </p>
-    
-   
+
     <h3>Events, Fundraising, &amp; Programs </h3>
     <p>Chair - Jasmyne Ormond</p>
     <p>Co-Chair - Myshaina Kehinde</p>
@@ -73,8 +71,7 @@ const Engagement = () => (
       that will engage alumni and hold events that will connect alumni with
       SRMHS.
     </p>
-    
-   
+
     <h3>Finance &amp; Audit</h3>
     <p>Chairperson - Myshaina Kehinde</p>
     <p>Co- Chair - Open</p>
@@ -84,7 +81,6 @@ const Engagement = () => (
       the Association. This committee assists in preparing SRMHS program-by-
       program budgetary procedures and accepting committee budget requests.
     </p>
-    
 
     <h3>Membership &amp; Outreach</h3>
     <p>Chair - Clarissa Jones</p>
@@ -98,7 +94,6 @@ const Engagement = () => (
       number of alumni participating in the various boards and committees that
       comprise the Alumni Association.
     </p>
-    
 
     <h2>Class Representatives</h2>
     <p>

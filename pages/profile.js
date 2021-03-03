@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { gql, useSubscription, useMutation } from '@apollo/react-hooks'
+import { useUser } from '@auth0/nextjs-auth0'
 import { withApollo } from '../lib/withApollo'
-import { useFetchUser } from '../lib/user'
 import Warning from '../components/warning'
 import MembershipStatusIcon from '../components/membership-status-icon'
 import InputName from '../components/profile/input-name'
@@ -61,7 +61,7 @@ const UPDATE_ENROLLMENT = gql`
 
 const Profile = () => {
   const router = useRouter()
-  const { user } = useFetchUser({ required: true })
+  const { user } = useUser({ required: true })
   const { data, loading, error: selectError } = useSubscription(
     GET_ENROLLMENT,
     {

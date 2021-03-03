@@ -1,5 +1,6 @@
 import React from 'react'
 import Router from 'next/router'
+import { UserProvider } from '@auth0/nextjs-auth0'
 import Layout from '../components/layout'
 import { pageview } from '../lib/gtag'
 import '../styles/index.css'
@@ -11,9 +12,11 @@ function MyApp({ Component, pageProps }) {
   // https://adamwathan.me/2019/10/17/persistent-layout-patterns-in-nextjs/
   const SiteLayout = Component.layout || Layout
   return (
-    <SiteLayout>
-      <Component {...pageProps} />
-    </SiteLayout>
+    <UserProvider>
+      <SiteLayout>
+        <Component {...pageProps} />
+      </SiteLayout>
+    </UserProvider>
   )
 }
 

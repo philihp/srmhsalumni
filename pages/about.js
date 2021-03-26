@@ -46,7 +46,7 @@ const About = () => (
       <StaffCard
         title="Membership Director"
         name="Clarissa Jones"
-        src="/Clarissa.jpg"
+        src="/CJones Professional Pic.png"
       />
       <StaffCard
         title="Community Relations Director"

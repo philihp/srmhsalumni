@@ -189,7 +189,11 @@ const Membership = () => {
           </div>
         </form>
       )}
-      <h2>Frequently Asked Questions</h2>
+      <h2> PLEASE NOTE THAT MEMBERSHIP FOR THE 2021 YEAR HAS CLOSED. ANY PAYMNENT RECEIVED AFTER APRIL 1ST WITHOUT 
+      WRITTEN PERMISSION WILL NOT BE REFUNDED. MEMBERSHIP FOR THE 2022 YEAR WILL OPEN IN JANUARY 2022.</h2>
+         <p>
+        </p>
+        <h2>Frequently Asked Questions</h2>
       <p>
         <b>1. How do I join the Alumni Association?</b>
       </p>

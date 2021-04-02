@@ -1,10 +1,3 @@
-import React from 'react'
-
-<h2> PLEASE NOTE THAT MEMBERSHIP FOR THE 2021 YEAR HAS CLOSED. ANY PAYMENT RECEIVED AFTER APRIL 1ST WITHOUT WRITTEN PERMISSION WILL NOT BE REFUNDED. 
-      MEMBERSHIP FOR THE 2022 YEAR WILL OPEN IN JANUARY 2022</h2>
-         <p>
-        </p>
-
 import React, { useState } from 'react'
 import { gql, useMutation, useQuery } from '@apollo/react-hooks'
 import { loadStripe } from '@stripe/stripe-js'

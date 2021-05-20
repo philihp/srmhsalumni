@@ -32,7 +32,7 @@
     "graphql": "15.5.0",
     "hasura": "2.0.1",
     "js-cookie": "2.2.1",
-    "next": "10.2.1",
+    "next": "10.2.2",
     "next-absolute-url": "1.2.2",
     "nookies": "2.5.2",
     "prop-types": "15.7.2",

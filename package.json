@@ -60,7 +60,7 @@
     "jest-environment-enzyme": "7.1.2",
     "jest-enzyme": "7.1.2",
     "jest-react-hooks-shallow": "1.5.1",
-    "lint-staged": "11.1.0",
+    "lint-staged": "11.1.1",
     "postcss-flexbugs-fixes": "5.0.2",
     "postcss-preset-env": "6.7.0",
     "test-listen": "1.1.0"

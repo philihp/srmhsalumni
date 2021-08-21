@@ -18,7 +18,7 @@
     "@apollo/react-hooks": "4.0.0",
     "@apollo/react-ssr": "4.0.0",
     "@auth0/nextjs-auth0": "1.5.0",
-    "@stripe/stripe-js": "1.17.0",
+    "@stripe/stripe-js": "1.17.1",
     "@tailwindcss/forms": "0.3.3",
     "@tailwindcss/typography": "0.4.1",
     "apollo-boost": "0.4.9",
